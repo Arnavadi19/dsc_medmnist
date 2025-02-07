@@ -33,7 +33,7 @@ parser = argparse.ArgumentParser("Training")
 
 
 # Dataset
-parser.add_argument('--dataset', type=str, default='bloodmnist', choices=['bloodmnist', 'octmnist'], help="Dataset selection")
+parser.add_argument('--dataset', type=str, default='bloodmnist', choices=['bloodmnist', 'bloodmnist224', 'octmnist'], help="Dataset selection")
 parser.add_argument('--dataroot', type=str, default='./data')
 parser.add_argument('--outf', type=str, default='./logs_results', help='Directory to save results')
 # Optimization
@@ -43,7 +43,7 @@ parser.add_argument('--max-epoch', type=int, default=100)
 # model
 parser.add_argument('--noisy-ratio', type=float, default=0.0, help="noisy ratio for ablation study")
 parser.add_argument('--margin', type=float, default=48.0, help="margin for hinge")
-parser.add_argument('--Expand', default=200, type=int, metavar='N', help='Expand factor of centers')
+parser.add_argument('--Expand', default=400, type=int, metavar='N', help='Expand factor of centers')
 parser.add_argument('--model', type=str, default='classifier32', help='resnet50, classifier32, vit')
 parser.add_argument('--loss', type=str, default='NirvanaOpenset')
 # misc
@@ -55,7 +55,7 @@ parser.add_argument('--use-cpu', action='store_true')
 parser.add_argument('--save-dir', type=str, default='../log_random30k_noisy_rampfalse')
 parser.add_argument('--eval', action='store_true', help="Eval", default=False)
 parser.add_argument('--oe', action='store_true', help="Outlier Exposure", default=True)
-
+parser.add_argument('--oe-path', type=str, default='/home/arnav/reaching_nirvana/dsc/data/300K_random_images/300K_random_images.npy', help='Path to 300K random images for outlier exposure')
 
 def main_worker(options):
     is_best_acc_avg = False
@@ -80,47 +80,25 @@ def main_worker(options):
     print("{} Preparation".format(options['dataset']))
     if options['dataset'] == 'bloodmnist':
 
-        Data = BloodMNIST_OSR(
-            known=options['known'],
-            dataroot=options['dataroot'],
-            use_gpu=not options['use_cpu'],
-            batch_size=options['batch_size']
-        )
+        if options['model'] == 'vit':
+            Data = BloodMNIST_224_OSR(
+                known=options['known'],
+                dataroot=options['dataroot'],
+                use_gpu=not options['use_cpu'],
+                batch_size=options['batch_size']
+            )
+        else:
+            Data = BloodMNIST_OSR(
+                known=options['known'],
+                dataroot=options['dataroot'],
+                use_gpu=not options['use_cpu'],
+                batch_size=options['batch_size']
+            )
+
         trainloader = Data.train_loader
         testloader = Data.test_loader 
         outloader = Data.out_loader
 
-        if options['oe']:
-            print("Outlier exposure mode is on. Other datasets")
-            try:
-                background_path = os.path.join(os.path.dirname(options['dataroot']), 
-                                            '300K_random_images', 
-                                            '300K_random_images.npy')
-                if not os.path.exists(background_path):
-                    raise FileNotFoundError(f"Background dataset not found at {background_path}")
-                    
-                oe_data = Random300K_Images(
-                    file_path=background_path,
-                    transform=tf.Compose([
-                        tf.RandomCrop(32, padding=4),
-                        tf.RandomHorizontalFlip(), 
-                        tf.ToTensor(),
-                    ]),
-                    extendable=options['noisy_ratio']
-                )
-                print(f"Loaded background dataset with {len(oe_data)} images")
-                
-                trainloader_oe = torch.utils.data.DataLoader(
-                    oe_data, 
-                    batch_size=options['batch_size'], 
-                    shuffle=True,
-                    num_workers=0,
-                    drop_last=True
-                )
-                print(f"Background loader created with {len(trainloader_oe)} batches")
-            except Exception as e:
-                print(f"Warning: Failed to load background dataset: {str(e)}")
-                trainloader_oe = None
 
     elif options['dataset'] == 'octmnist':
         split_dict = splits['octmnist'][i]
@@ -137,25 +115,39 @@ def main_worker(options):
         trainloader = Data.train_loader
         testloader = Data.test_loader
         outloader = Data.out_loader
-
-        if options['oe']:
-            print("Outlier exposure mode is on. Other datasets")
-            try:
+        
+    else:
+        print('No dataset chosen.')
+    
+    print("Outlier exposure mode is on. Other datasets")
+    try:
                 background_path = os.path.join(os.path.dirname(options['dataroot']), 
                                             '300K_random_images', 
                                             '300K_random_images.npy')
                 if not os.path.exists(background_path):
                     raise FileNotFoundError(f"Background dataset not found at {background_path}")
                     
-                oe_data = Random300K_Images(
-                    file_path=background_path,
-                    transform=tf.Compose([
-                        tf.RandomCrop(32, padding=4),
-                        tf.RandomHorizontalFlip(), 
-                        tf.ToTensor(),
-                    ]),
-                    extendable=options['noisy_ratio']
-                )
+                if options['model'] == 'vit':
+                    oe_data = Random300K_Images(
+                        file_path=background_path,
+                        transform=tf.Compose([
+                            tf.Resize((224, 224)),  # Resize to match ViT input
+                            tf.RandomHorizontalFlip(), 
+                            tf.ToTensor(),
+                            tf.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])  # DINO normalization
+                        ]),
+                        extendable=options['noisy_ratio']
+                    )
+                else:
+                    oe_data = Random300K_Images(
+                        file_path=background_path,
+                        transform=tf.Compose([
+                            tf.RandomCrop(32, padding=4),
+                            tf.RandomHorizontalFlip(), 
+                            tf.ToTensor(),
+                        ]),
+                        extendable=options['noisy_ratio']
+                    )
                 print(f"Loaded background dataset with {len(oe_data)} images")
                 
                 trainloader_oe = torch.utils.data.DataLoader(
@@ -166,27 +158,16 @@ def main_worker(options):
                     drop_last=True
                 )
                 print(f"Background loader created with {len(trainloader_oe)} batches")
-            except Exception as e:
+    except Exception as e:
                 print(f"Warning: Failed to load background dataset: {str(e)}")
-                trainloader_oe = None
-                            
-    else:
-        print('No dataset chosen.')
-    
-    print("Outlier exposure mode is on. Other datasets")
-    # oe_data = Random300K_Images(transform =tf.Compose(
-    #     [tf.RandomCrop(32, padding=4),
-    #     tf.RandomHorizontalFlip(), tf.ToTensor(),
-    #     # tf.Normalize([0.519,0.511,0.508], [0.317,0.312,0.306]) ,
-    #     ]),extendable=options['noisy_ratio'])
+                trainloader_oe = None        
+
     if (options['noisy_ratio']):
         # oe_data.data = np.concatenate((Data.noisy_data,oe_data.data),axis=0)
         oe_data.data = oe_data.data[:30000]
         oe_data.data.extend(list(Data.noisy_data))
         print("#of background images {}".format(len(oe_data)))
         options['ramp_activate'] = True
-
-    trainloader_oe = torch.utils.data.DataLoader(oe_data, batch_size=options['batch_size'], shuffle=True, num_workers = 0, drop_last=True)
     
 
     options['num_classes'] = Data.num_classes
@@ -208,14 +189,6 @@ def main_worker(options):
         img_size = 224
         net = extractor.model
         feat_dim = 384  # ViT-S feature dimension
-        img_size = 224
-        # Use 224x224 version of dataset
-        Data = BloodMNIST_224_OSR(
-            known=options['known'],
-            dataroot=options['dataroot'],
-            use_gpu=not options['use_cpu'],
-            batch_size=options['batch_size']
-        )
     else:
         raise 'model is not defined'
         
@@ -286,43 +259,27 @@ def main_worker(options):
     print("Finished. Total elapsed time (h:m:s): {}".format(elapsed))
     return results_best, results_b9_best
 
-
 if __name__ == '__main__':
     args = parser.parse_args()
-    # Add after parsing args
     device = torch.device('cuda' if torch.cuda.is_available() and not args.use_cpu else 'cpu')
     print(f'Using device: {device}')
     options = vars(args)
+    options['device'] = device  # Add device to options
     options['dataroot'] = os.path.join(options['dataroot'], options['dataset'])
-    img_size = 32
     results = dict()
     results_b9 = dict()    
 
     for i in range(len(splits[options['dataset']])):
-        known = splits[options['dataset']][len(splits[options['dataset']])-i-1]
-        if options['dataset'] == 'bloodmnist':
-            split_dict = splits['bloodmnist'][i]
-            known = split_dict['known']
-            unknown = split_dict['unknown']
-            img_size = 32
-            
-            Data = BloodMNIST_OSR(
-                known=known,
-                dataroot=options['dataroot'],
-                use_gpu=not options['use_cpu'],
-                batch_size=options['batch_size']
-            )
-        else:
-            unknown = list(set(list(range(0, 10))) - set(known))
-
-        options.update(
-            {
-                'item':     i,
-                'known':    known,
-                'unknown':  unknown,
-                'img_size': img_size
-            }
-        )
+        split_dict = splits[options['dataset']][i]
+        known = split_dict['known']
+        unknown = split_dict['unknown']
+        
+        options.update({
+            'item': i,
+            'known': known,
+            'unknown': unknown,
+            'img_size': 224 if options['model'] == 'vit' else 32
+        })
 
         dir_name = '{}_{}_{}_{}_{}'.format(options['model'], options['loss'],options['margin'],options['oe'],options['noisy_ratio'])
         dir_path = os.path.join(options['outf'], 'results', dir_name)
@@ -347,4 +304,3 @@ if __name__ == '__main__':
         results_b9[str(i)] = res_b9
         df_b9 = pd.DataFrame(results_b9)
         df_b9.to_csv(os.path.join(dir_path, file_name_b9))
-

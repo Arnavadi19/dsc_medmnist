@@ -53,8 +53,8 @@ class BloodMNIST_OSR(object):
             
         self.unknown = list(set(range(0, 8)) - set(self.known))
 
-        print('Known classes:', self.known)
-        print('Unknown classes:', self.unknown)
+        print('BloodMNIST_OSR Known classes:', self.known)
+        print('BloodMNIST_OSR Unknown classes:', self.unknown)
 
         # Define transforms
         transform = transforms.Compose([
@@ -77,7 +77,7 @@ class BloodMNIST_OSR(object):
 
         # Fix 2: Debug print class distribution
         train_labels = train_dataset.labels.squeeze()
-        print("Training set class distribution:", np.bincount(train_labels))
+        print("BloodMNIST_OSR Training set class distribution:", np.bincount(train_labels))
 
         # Filter datasets
         train_mask = np.isin(train_dataset.labels.squeeze(), self.known)
@@ -127,9 +127,9 @@ class BloodMNIST_OSR(object):
             print(f"Warning: Background dataset not found at {background_path}")
             self.background_loader = None
 
-        print(f'Train samples: {len(self.train_loader.dataset)}')
-        print(f'Test samples (known): {len(self.test_loader.dataset)}')
-        print(f'Test samples (unknown): {len(self.out_loader.dataset)}')
+        print(f'BloodMNIST_OSR Train samples: {len(self.train_loader.dataset)}')
+        print(f'BloodMNIST_OSR Test samples (known): {len(self.test_loader.dataset)}')
+        print(f'BloodMNIST_OSR Test samples (unknown): {len(self.out_loader.dataset)}')
 
         
 class FilteredDataset(Dataset):
@@ -153,8 +153,8 @@ class BloodMNIST_224_OSR(object):
         self.known = known if not isinstance(known, dict) else known['known']
         self.unknown = list(set(range(0, 8)) - set(self.known))
 
-        print('Known classes:', self.known)
-        print('Unknown classes:', self.unknown)
+        print('BloodMNIST_224_OSR Known classes:', self.known)
+        print('BloodMNIST_224_OSR Unknown classes:', self.unknown)
 
         # Define transforms for 224x224 images
         transform = transforms.Compose([
@@ -176,6 +176,7 @@ class BloodMNIST_224_OSR(object):
             transform=transform,
             download=True, 
             root=dataroot,
+            size = 224,
             as_rgb=True  # Convert to RGB
         )
                                  
@@ -184,12 +185,13 @@ class BloodMNIST_224_OSR(object):
             transform=test_transform,
             download=True,
             root=dataroot,
+            size = 224,
             as_rgb=True  # Convert to RGB
         )
 
         # Debug print class distribution
         train_labels = train_dataset.labels.squeeze()
-        print("Training set class distribution:", np.bincount(train_labels))
+        print("BloodMNIST_224_OSR Training set class distribution:", np.bincount(train_labels))
 
         # Filter datasets
         train_mask = np.isin(train_dataset.labels.squeeze(), self.known)
@@ -215,9 +217,9 @@ class BloodMNIST_224_OSR(object):
             num_workers=num_workers, pin_memory=use_gpu
         )
 
-        print(f'Train samples: {len(self.train_loader.dataset)}')
-        print(f'Test samples (known): {len(self.test_loader.dataset)}')
-        print(f'Test samples (unknown): {len(self.out_loader.dataset)}')
+        print(f'BloodMNIST_224_OSR Train samples: {len(self.train_loader.dataset)}')
+        print(f'BloodMNIST_224_OSR Test samples (known): {len(self.test_loader.dataset)}')
+        print(f'BloodMNIST_224_OSR Test samples (unknown): {len(self.out_loader.dataset)}')
 
 class OCTMnist_OSR(object):
     def __init__(self, known, dataroot='./data', use_gpu=True, num_workers=4, batch_size=128):

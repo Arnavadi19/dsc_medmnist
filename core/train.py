@@ -46,6 +46,14 @@ def train_Nirvana_oe(net, criterion, optimizer, scheduler, trainloader, trainloa
             total_loss.backward()
             optimizer.step()
             scheduler.step()
+        losses.update(total_loss.item(), targets_in.size(0))
+
+        if (batch_idx+1) % options['print_freq'] == 0:
+            print("LR: {} - Batch {}/{}\t Loss {:.6f} ({:.6f})" \
+                  .format(optimizer.param_groups[0]["lr"], batch_idx+1, len(trainloader), losses.val, losses.avg))
+    
+    print("Epoch {} loss: {:.6f}".format(epoch+1, losses.avg))
+    return losses.avg
 
 def train_ddfm_oe(net, criterion, optimizer, optimizer_center, scheduler,trainloader, trainloader_oe, epoch=None, **options):
     net.train()
