@@ -1,0 +1,2340 @@
+Using device: cuda
+Currently using GPU: 1
+bloodmnist Preparation
+BloodMNIST_224_OSR Known classes: [1, 2, 5, 7]
+BloodMNIST_224_OSR Unknown classes: [0, 3, 4, 6]
+Using downloaded and verified file: /content/drive/MyDrive/arnav_adi/dsc/data/bloodmnist/bloodmnist_224.npz
+Using downloaded and verified file: /content/drive/MyDrive/arnav_adi/dsc/data/bloodmnist/bloodmnist_224.npz
+BloodMNIST_224_OSR Training set class distribution: [ 852 2181 1085 2026  849  993 2330 1643]
+BloodMNIST_224_OSR Train samples: 5902
+BloodMNIST_224_OSR Test samples (known): 1689
+BloodMNIST_224_OSR Test samples (unknown): 1732
+Outlier exposure mode is on. Other datasets
+Loaded background dataset with 300000 images
+Background loader created with 12500 batches
+Creating model: vit
+Downloading: "https://dl.fbaipublicfiles.com/dino/dino_deitsmall8_pretrain/dino_deitsmall8_pretrain.pth" to /root/.cache/torch/hub/checkpoints/dino_deitsmall8_pretrain.pth
+100% 82.7M/82.7M [00:00<00:00, 253MB/s]
+Loading model with message: <All keys matched successfully>
+Centers loaded.
+==> Epoch 1/100
+LR: 0.0009999592278477386 - Batch 100/246	 Loss 16.404398 (27.635386)
+LR: 0.000999836918040426 - Batch 200/246	 Loss 13.369162 (21.305419)
+Epoch 0 loss: 19.495395
+==> Test NirvanaOpenset
+Acc: 45.76673
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     3.002 60.779 59.817 64.543 55.015
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     1.963 67.106 66.389 73.064 57.916
+Acc (%): 45.767	 AUROC (%): 60.779	 OSCR (%): 25.369	
+Normalized - Acc (%): 45.767	 AUROC (%): 67.106	 OSCR (%): 33.038	
+Best Acc (%): 45.767	 AUROC (%): 60.779	 OSCR (%): 25.369	
+Normalized - Best Acc (%): 45.767	 AUROC (%): 67.106	 OSCR (%): 33.038	
+==> Epoch 2/100
+LR: 0.0009995119648815347 - Batch 100/246	 Loss 8.949480 (9.624018)
+LR: 0.0009991891848686514 - Batch 200/246	 Loss 4.660615 (8.786029)
+Epoch 1 loss: 8.461859
+==> Test NirvanaOpenset
+Acc: 29.30728
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     1.963 64.566 64.208 69.751 56.487
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     0.173 38.987 52.765 48.502 41.221
+Acc (%): 29.307	 AUROC (%): 64.566	 OSCR (%): 11.190	
+Normalized - Acc (%): 29.307	 AUROC (%): 38.987	 OSCR (%): 11.099	
+==> Epoch 3/100
+LR: 0.0009985717439128059 - Batch 100/246	 Loss 7.332474 (6.975735)
+LR: 0.0009980488122392555 - Batch 200/246	 Loss 7.005261 (7.044277)
+Epoch 2 loss: 6.979747
+==> Test NirvanaOpenset
+Acc: 30.66903
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     0.924 66.103 64.882 69.490 57.655
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     0.115 30.131 50.000 38.226 37.855
+Acc (%): 30.669	 AUROC (%): 66.103	 OSCR (%): 12.358	
+Normalized - Acc (%): 30.669	 AUROC (%): 30.131	 OSCR (%): 6.444	
+==> Epoch 4/100
+LR: 0.0009971394928261323 - Batch 100/246	 Loss 7.770668 (6.007336)
+LR: 0.0009964169255623398 - Batch 200/246	 Loss 5.139507 (6.156757)
+Epoch 3 loss: 6.119728
+==> Test NirvanaOpenset
+Acc: 51.68739
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     0.693 69.297 68.402 75.237 59.201
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     2.656 70.939 68.578 76.565 61.623
+Acc (%): 51.687	 AUROC (%): 69.297	 OSCR (%): 34.542	
+Normalized - Acc (%): 51.687	 AUROC (%): 70.939	 OSCR (%): 36.442	
+Best Acc (%): 51.687	 AUROC (%): 69.297	 OSCR (%): 34.542	
+Normalized - Best Acc (%): 51.687	 AUROC (%): 70.939	 OSCR (%): 36.442	
+==> Epoch 5/100
+LR: 0.000995216625080418 - Batch 100/246	 Loss 5.771575 (5.537502)
+LR: 0.0009942951353130367 - Batch 200/246	 Loss 6.377564 (5.695827)
+Epoch 4 loss: 5.593522
+==> Test NirvanaOpenset
+Acc: 60.86442
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     1.559 60.079 65.232 69.610 53.098
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    12.182 70.431 66.634 74.512 65.925
+Acc (%): 60.864	 AUROC (%): 60.079	 OSCR (%): 30.452	
+Normalized - Acc (%): 60.864	 AUROC (%): 70.431	 OSCR (%): 41.294	
+Normalized - Best Acc (%): 60.864	 AUROC (%): 70.431	 OSCR (%): 41.294	
+==> Epoch 6/100
+LR: 0.0009928050383139764 - Batch 100/246	 Loss 4.309183 (4.816767)
+LR: 0.0009916855354421533 - Batch 200/246	 Loss 4.964351 (4.398922)
+Epoch 5 loss: 4.436154
+==> Test NirvanaOpenset
+Acc: 61.10124
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     0.289 69.972 69.154 75.070 59.270
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    24.769 75.492 71.194 72.649 73.760
+Acc (%): 61.101	 AUROC (%): 69.972	 OSCR (%): 36.516	
+Normalized - Acc (%): 61.101	 AUROC (%): 75.492	 OSCR (%): 44.712	
+Best Acc (%): 61.101	 AUROC (%): 69.972	 OSCR (%): 36.516	
+Normalized - Best Acc (%): 61.101	 AUROC (%): 75.492	 OSCR (%): 44.712	
+==> Epoch 7/100
+LR: 0.0009899071124717914 - Batch 100/246	 Loss 2.039744 (3.747871)
+LR: 0.000988590701309704 - Batch 200/246	 Loss 2.178038 (3.436456)
+Epoch 6 loss: 3.343225
+==> Test NirvanaOpenset
+Acc: 50.74008
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     4.792 53.319 63.387 63.843 50.896
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     0.751 63.724 62.408 68.739 55.404
+Acc (%): 50.740	 AUROC (%): 53.319	 OSCR (%): 18.538	
+Normalized - Acc (%): 50.740	 AUROC (%): 63.724	 OSCR (%): 29.896	
+==> Epoch 8/100
+LR: 0.0009865257074568009 - Batch 100/246	 Loss 3.329848 (3.339636)
+LR: 0.0009850136871433306 - Batch 200/246	 Loss 2.164390 (3.242457)
+Epoch 7 loss: 3.209549
+==> Test NirvanaOpenset
+Acc: 64.77205
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     3.176 67.998 67.835 73.869 59.266
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     2.829 70.395 65.903 70.631 63.462
+Acc (%): 64.772	 AUROC (%): 67.998	 OSCR (%): 36.458	
+Normalized - Acc (%): 64.772	 AUROC (%): 70.395	 OSCR (%): 51.181	
+Normalized - Best Acc (%): 64.772	 AUROC (%): 70.395	 OSCR (%): 51.181	
+==> Epoch 9/100
+LR: 0.0009826641603075089 - Batch 100/246	 Loss 2.030571 (2.916168)
+LR: 0.0009809580230241588 - Batch 200/246	 Loss 3.547461 (2.747506)
+Epoch 8 loss: 2.678374
+==> Test NirvanaOpenset
+Acc: 65.36412
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     7.968 57.471 62.942 66.858 55.208
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     3.233 69.080 64.330 70.320 62.567
+Acc (%): 65.364	 AUROC (%): 57.471	 OSCR (%): 27.270	
+Normalized - Acc (%): 65.364	 AUROC (%): 69.080	 OSCR (%): 48.886	
+==> Epoch 10/100
+LR: 0.0009783262819047433 - Batch 100/246	 Loss 1.701928 (2.522117)
+LR: 0.0009764277114030275 - Batch 200/246	 Loss 2.653803 (2.021059)
+Epoch 9 loss: 2.072470
+==> Test NirvanaOpenset
+Acc: 89.22439
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     0.346 44.379 57.514 57.406 42.990
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     3.868 50.350 59.889 60.099 47.277
+Acc (%): 89.224	 AUROC (%): 44.379	 OSCR (%): 36.656	
+Normalized - Acc (%): 89.224	 AUROC (%): 50.350	 OSCR (%): 45.576	
+==> Epoch 11/100
+LR: 0.000973516353210769 - Batch 100/246	 Loss 1.611853 (1.265009)
+LR: 0.0009714272231505565 - Batch 200/246	 Loss 1.962885 (1.389267)
+Epoch 10 loss: 1.333157
+==> Test NirvanaOpenset
+Acc: 93.36886
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     3.291 49.657 59.096 60.016 47.882
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    21.363 68.556 65.647 71.248 66.243
+Acc (%): 93.369	 AUROC (%): 49.657	 OSCR (%): 46.405	
+Normalized - Acc (%): 93.369	 AUROC (%): 68.556	 OSCR (%): 64.996	
+Normalized - Best Acc (%): 93.369	 AUROC (%): 68.556	 OSCR (%): 64.996	
+==> Epoch 12/100
+LR: 0.0009682391210444996 - Batch 100/246	 Loss 0.594454 (0.951864)
+LR: 0.0009659614931449342 - Batch 200/246	 Loss 1.818132 (1.535019)
+Epoch 11 loss: 1.621719
+==> Test NirvanaOpenset
+Acc: 72.76495
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     2.079 45.510 58.380 58.598 44.848
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     0.751 59.116 62.472 64.494 52.671
+Acc (%): 72.765	 AUROC (%): 45.510	 OSCR (%): 26.327	
+Normalized - Acc (%): 72.765	 AUROC (%): 59.116	 OSCR (%): 42.494	
+==> Epoch 13/100
+LR: 0.000962499793396953 - Batch 100/246	 Loss 2.006439 (1.996915)
+LR: 0.0009600359154017917 - Batch 200/246	 Loss 0.356041 (1.656209)
+Epoch 12 loss: 1.520230
+==> Test NirvanaOpenset
+Acc: 75.42925
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     0.058 51.539 62.429 64.487 46.186
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     3.291 68.517 65.015 69.024 63.112
+Acc (%): 75.429	 AUROC (%): 51.539	 OSCR (%): 33.815	
+Normalized - Acc (%): 75.429	 AUROC (%): 68.517	 OSCR (%): 51.230	
+==> Epoch 14/100
+LR: 0.0009563040342916008 - Batch 100/246	 Loss 2.030411 (0.826182)
+LR: 0.0009536563377509553 - Batch 200/246	 Loss 0.933653 (0.824498)
+Epoch 13 loss: 0.841475
+==> Test NirvanaOpenset
+Acc: 79.04085
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     0.058 51.121 65.746 66.294 45.792
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     2.194 63.691 63.078 64.276 56.990
+Acc (%): 79.041	 AUROC (%): 51.121	 OSCR (%): 34.638	
+Normalized - Acc (%): 79.041	 AUROC (%): 63.691	 OSCR (%): 49.623	
+==> Epoch 15/100
+LR: 0.0009496579581946551 - Batch 100/246	 Loss 0.698615 (0.555079)
+LR: 0.0009468290560653521 - Batch 200/246	 Loss 0.451204 (0.619094)
+Epoch 14 loss: 0.613496
+==> Test NirvanaOpenset
+Acc: 80.22499
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     0.693 49.461 61.684 62.796 45.260
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    27.540 71.428 68.326 66.851 73.268
+Acc (%): 80.225	 AUROC (%): 49.461	 OSCR (%): 34.929	
+Normalized - Acc (%): 80.225	 AUROC (%): 71.428	 OSCR (%): 58.461	
+==> Epoch 16/100
+LR: 0.0009425681239808348 - Batch 100/246	 Loss 0.831842 (0.612205)
+LR: 0.0009395608080477384 - Batch 200/246	 Loss 0.283461 (0.549665)
+Epoch 15 loss: 0.602437
+==> Test NirvanaOpenset
+Acc: 87.98105
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     0.115 49.400 63.599 64.493 45.031
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     2.309 66.816 62.739 66.960 60.951
+Acc (%): 87.981	 AUROC (%): 49.400	 OSCR (%): 41.043	
+Normalized - Acc (%): 87.981	 AUROC (%): 66.816	 OSCR (%): 61.490	
+==> Epoch 17/100
+LR: 0.0009350415284605435 - Batch 100/246	 Loss 0.268694 (0.628792)
+LR: 0.0009318587665814017 - Batch 200/246	 Loss 0.330960 (0.798505)
+Epoch 16 loss: 0.770656
+==> Test NirvanaOpenset
+Acc: 75.78449
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     0.058 43.672 54.985 54.141 43.134
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     0.000 41.047 57.673 55.302 41.646
+Acc (%): 75.784	 AUROC (%): 43.672	 OSCR (%): 29.482	
+Normalized - Acc (%): 75.784	 AUROC (%): 41.047	 OSCR (%): 30.055	
+==> Epoch 18/100
+LR: 0.0009270855994748608 - Batch 100/246	 Loss 0.778744 (0.530366)
+LR: 0.0009237305326513897 - Batch 200/246	 Loss 0.679027 (0.513309)
+Epoch 17 loss: 0.523005
+==> Test NirvanaOpenset
+Acc: 85.79041
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     0.058 48.396 60.253 60.968 44.888
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    10.681 68.023 65.979 64.995 64.954
+Acc (%): 85.790	 AUROC (%): 48.396	 OSCR (%): 39.424	
+Normalized - Acc (%): 85.790	 AUROC (%): 68.023	 OSCR (%): 60.063	
+==> Epoch 19/100
+LR: 0.0009187081885651677 - Batch 100/246	 Loss 0.842889 (1.424128)
+LR: 0.0009151841278432585 - Batch 200/246	 Loss 0.387659 (1.061845)
+Epoch 18 loss: 0.954179
+==> Test NirvanaOpenset
+Acc: 74.89639
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     0.346 52.126 62.135 63.644 46.562
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    12.471 65.421 65.325 69.708 62.718
+Acc (%): 74.896	 AUROC (%): 52.126	 OSCR (%): 31.501	
+Normalized - Acc (%): 74.896	 AUROC (%): 65.421	 OSCR (%): 45.608	
+==> Epoch 20/100
+LR: 0.0009099175632246104 - Batch 100/246	 Loss 0.790292 (0.581260)
+LR: 0.0009062279864267326 - Batch 200/246	 Loss 0.310582 (0.561287)
+Epoch 19 loss: 0.557859
+==> Test NirvanaOpenset
+Acc: 57.66726
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     0.231 52.151 61.487 62.767 46.591
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     2.714 56.688 58.875 61.410 51.789
+Acc (%): 57.667	 AUROC (%): 52.151	 OSCR (%): 17.166	
+Normalized - Acc (%): 57.667	 AUROC (%): 56.688	 OSCR (%): 23.269	
+==> Epoch 21/100
+LR: 0.0009007223987390997 - Batch 100/246	 Loss 0.506748 (0.501676)
+LR: 0.0008968709470321026 - Batch 200/246	 Loss 0.217721 (0.517094)
+Epoch 20 loss: 0.504014
+==> Test NirvanaOpenset
+Acc: 75.90290
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     0.289 50.262 60.873 61.304 45.684
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    24.307 71.763 64.995 72.343 72.620
+Acc (%): 75.903	 AUROC (%): 50.262	 OSCR (%): 30.444	
+Normalized - Acc (%): 75.903	 AUROC (%): 71.763	 OSCR (%): 53.761	
+==> Epoch 22/100
+LR: 0.0008911317696258347 - Batch 100/246	 Loss 0.282921 (0.581759)
+LR: 0.0008871222439275621 - Batch 200/246	 Loss 0.356603 (0.525018)
+Epoch 21 loss: 0.525452
+==> Test NirvanaOpenset
+Acc: 80.63943
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     0.115 45.378 57.700 56.440 43.539
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    15.127 68.915 65.347 71.222 66.663
+Acc (%): 80.639	 AUROC (%): 45.378	 OSCR (%): 30.226	
+Normalized - Acc (%): 80.639	 AUROC (%): 68.915	 OSCR (%): 55.072	
+==> Epoch 23/100
+LR: 0.0008811551406778583 - Batch 100/246	 Loss 0.270625 (0.492487)
+LR: 0.0008769914979061002 - Batch 200/246	 Loss 1.078307 (0.490542)
+Epoch 22 loss: 0.480452
+==> Test NirvanaOpenset
+Acc: 77.85672
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     0.635 48.235 58.812 58.035 44.859
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    28.522 72.457 64.879 71.520 72.917
+Acc (%): 77.857	 AUROC (%): 48.235	 OSCR (%): 30.477	
+Normalized - Acc (%): 77.857	 AUROC (%): 72.457	 OSCR (%): 56.120	
+==> Epoch 24/100
+LR: 0.0008708023576234519 - Batch 100/246	 Loss 0.679157 (0.416785)
+LR: 0.0008664887067909394 - Batch 200/246	 Loss 0.257431 (0.432052)
+Epoch 23 loss: 0.464078
+==> Test NirvanaOpenset
+Acc: 77.02783
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     0.404 49.407 60.616 60.685 45.239
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    51.963 84.372 76.512 82.381 86.549
+Acc (%): 77.028	 AUROC (%): 49.407	 OSCR (%): 30.916	
+Normalized - Acc (%): 77.028	 AUROC (%): 84.372	 OSCR (%): 67.304	
+Normalized - Best Acc (%): 77.028	 AUROC (%): 84.372	 OSCR (%): 67.304	
+==> Epoch 25/100
+LR: 0.0008600836374095809 - Batch 100/246	 Loss 0.811415 (0.470952)
+LR: 0.0008556242355688931 - Batch 200/246	 Loss 0.283824 (0.466894)
+Epoch 24 loss: 0.456723
+==> Test NirvanaOpenset
+Acc: 81.88277
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     0.404 45.738 57.282 56.137 43.682
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    46.824 82.900 74.204 81.029 84.477
+Acc (%): 81.883	 AUROC (%): 45.738	 OSCR (%): 31.531	
+Normalized - Acc (%): 81.883	 AUROC (%): 82.900	 OSCR (%): 69.659	
+Normalized - Best Acc (%): 81.883	 AUROC (%): 82.900	 OSCR (%): 69.659	
+==> Epoch 26/100
+LR: 0.0008490095581190117 - Batch 100/246	 Loss 1.814663 (0.410656)
+LR: 0.0008444088061613752 - Batch 200/246	 Loss 1.340024 (0.448911)
+Epoch 25 loss: 0.430248
+==> Test NirvanaOpenset
+Acc: 80.28419
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     0.924 48.435 57.509 58.146 45.163
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    41.801 80.566 73.158 79.077 81.675
+Acc (%): 80.284	 AUROC (%): 48.435	 OSCR (%): 33.900	
+Normalized - Acc (%): 80.284	 AUROC (%): 80.566	 OSCR (%): 67.164	
+==> Epoch 27/100
+LR: 0.0008375910485310129 - Batch 100/246	 Loss 0.283178 (0.362939)
+LR: 0.0008328534868431558 - Batch 200/246	 Loss 0.756476 (0.377943)
+Epoch 26 loss: 0.386014
+==> Test NirvanaOpenset
+Acc: 85.55358
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     0.577 47.076 56.482 56.153 44.441
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    39.261 75.763 69.742 73.126 78.072
+Acc (%): 85.554	 AUROC (%): 47.076	 OSCR (%): 37.197	
+Normalized - Acc (%): 85.554	 AUROC (%): 75.763	 OSCR (%): 64.715	
+==> Epoch 28/100
+LR: 0.000825839377335978 - Batch 100/246	 Loss 0.224687 (0.487642)
+LR: 0.000820969681319311 - Batch 200/246	 Loss 1.071841 (0.493010)
+Epoch 27 loss: 0.469189
+==> Test NirvanaOpenset
+Acc: 71.40320
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     0.346 46.251 55.785 54.989 44.034
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    32.275 75.186 69.781 69.667 75.315
+Acc (%): 71.403	 AUROC (%): 46.251	 OSCR (%): 24.803	
+Normalized - Acc (%): 71.403	 AUROC (%): 75.186	 OSCR (%): 54.366	
+==> Epoch 29/100
+LR: 0.0008137661420145759 - Batch 100/246	 Loss 0.311163 (0.547121)
+LR: 0.0008087691174711431 - Batch 200/246	 Loss 0.198277 (0.491065)
+Epoch 28 loss: 0.458427
+==> Test NirvanaOpenset
+Acc: 59.20663
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     0.866 47.812 56.118 55.064 44.935
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    16.051 64.893 61.999 61.044 64.599
+Acc (%): 59.207	 AUROC (%): 47.812	 OSCR (%): 17.502	
+Normalized - Acc (%): 59.207	 AUROC (%): 64.893	 OSCR (%): 36.523	
+==> Epoch 30/100
+LR: 0.000801383257392451 - Batch 100/246	 Loss 0.717828 (0.368827)
+LR: 0.0007962638357821783 - Batch 200/246	 Loss 0.208809 (0.440877)
+Epoch 29 loss: 0.416700
+==> Test NirvanaOpenset
+Acc: 71.93606
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     0.346 45.803 55.536 54.558 43.818
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    36.028 78.215 72.073 74.602 77.576
+Acc (%): 71.936	 AUROC (%): 45.803	 OSCR (%): 24.900	
+Normalized - Acc (%): 71.936	 AUROC (%): 78.215	 OSCR (%): 58.201	
+==> Epoch 31/100
+LR: 0.0007887029438817209 - Batch 100/246	 Loss 0.299037 (0.338089)
+LR: 0.0007834661774556626 - Batch 200/246	 Loss 0.171050 (0.362770)
+Epoch 30 loss: 0.382792
+==> Test NirvanaOpenset
+Acc: 76.55417
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     0.289 42.515 53.691 51.181 42.434
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    37.067 79.413 71.962 76.756 79.184
+Acc (%): 76.554	 AUROC (%): 42.515	 OSCR (%): 24.522	
+Normalized - Acc (%): 76.554	 AUROC (%): 79.413	 OSCR (%): 63.152	
+==> Epoch 32/100
+LR: 0.0007757377154209078 - Batch 100/246	 Loss 0.204556 (0.379302)
+LR: 0.0007703887722352845 - Batch 200/246	 Loss 0.240787 (0.380243)
+Epoch 31 loss: 0.374623
+==> Test NirvanaOpenset
+Acc: 69.56779
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     0.866 47.133 55.691 54.889 44.594
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    27.309 76.466 69.839 74.495 74.919
+Acc (%): 69.568	 AUROC (%): 47.133	 OSCR (%): 24.867	
+Normalized - Acc (%): 69.568	 AUROC (%): 76.466	 OSCR (%): 54.759	
+==> Epoch 33/100
+LR: 0.000762500367125193 - Batch 100/246	 Loss 1.015315 (0.325656)
+LR: 0.0007570445259411423 - Batch 200/246	 Loss 0.217696 (0.359528)
+Epoch 32 loss: 0.381447
+==> Test NirvanaOpenset
+Acc: 69.62700
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     0.231 43.645 53.027 50.611 43.026
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    24.711 73.924 68.240 69.548 72.848
+Acc (%): 69.627	 AUROC (%): 43.645	 OSCR (%): 21.599	
+Normalized - Acc (%): 69.627	 AUROC (%): 73.924	 OSCR (%): 53.024	
+==> Epoch 34/100
+LR: 0.0007490039626591786 - Batch 100/246	 Loss 0.518677 (0.550134)
+LR: 0.0007434466077332582 - Batch 200/246	 Loss 0.225222 (0.491924)
+Epoch 33 loss: 0.479167
+==> Test NirvanaOpenset
+Acc: 67.85080
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     0.346 47.405 57.422 56.591 44.499
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    31.640 75.929 69.258 72.912 75.305
+Acc (%): 67.851	 AUROC (%): 47.405	 OSCR (%): 22.158	
+Normalized - Acc (%): 67.851	 AUROC (%): 75.929	 OSCR (%): 50.144	
+==> Epoch 35/100
+LR: 0.0007352618213446324 - Batch 100/246	 Loss 0.882430 (0.430798)
+LR: 0.0007296084371152062 - Batch 200/246	 Loss 0.157134 (0.398674)
+Epoch 34 loss: 0.395210
+==> Test NirvanaOpenset
+Acc: 69.44938
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     0.346 50.687 61.575 61.596 45.820
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    38.972 83.238 76.814 80.936 81.939
+Acc (%): 69.449	 AUROC (%): 50.687	 OSCR (%): 25.648	
+Normalized - Acc (%): 69.449	 AUROC (%): 83.238	 OSCR (%): 59.770	
+==> Epoch 36/100
+LR: 0.0007212875050159229 - Batch 100/246	 Loss 0.194703 (0.359691)
+LR: 0.0007155436706906844 - Batch 200/246	 Loss 0.152863 (0.444972)
+Epoch 35 loss: 0.428691
+==> Test NirvanaOpenset
+Acc: 77.02783
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     0.058 48.321 59.970 59.132 44.793
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    40.012 82.714 77.069 78.437 82.786
+Acc (%): 77.028	 AUROC (%): 48.321	 OSCR (%): 29.776	
+Normalized - Acc (%): 77.028	 AUROC (%): 82.714	 OSCR (%): 65.103	
+==> Epoch 37/100
+LR: 0.0007070948046361276 - Batch 100/246	 Loss 0.226422 (0.444766)
+LR: 0.0007012661886860935 - Batch 200/246	 Loss 0.726552 (0.432396)
+Epoch 36 loss: 0.424245
+==> Test NirvanaOpenset
+Acc: 83.00770
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     0.000 48.453 59.434 57.839 44.934
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    53.753 83.744 78.735 77.481 85.522
+Acc (%): 83.008	 AUROC (%): 48.453	 OSCR (%): 35.298	
+Normalized - Acc (%): 83.008	 AUROC (%): 83.744	 OSCR (%): 69.962	
+Normalized - Best Acc (%): 83.008	 AUROC (%): 83.744	 OSCR (%): 69.962	
+==> Epoch 38/100
+LR: 0.0006926977266870154 - Batch 100/246	 Loss 0.408538 (0.361254)
+LR: 0.0006867900812524318 - Batch 200/246	 Loss 0.234983 (0.346381)
+Epoch 37 loss: 0.344372
+==> Test NirvanaOpenset
+Acc: 79.69213
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     0.289 47.376 58.251 57.360 44.379
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    49.134 82.920 74.961 80.312 84.074
+Acc (%): 79.692	 AUROC (%): 47.376	 OSCR (%): 32.078	
+Normalized - Acc (%): 79.692	 AUROC (%): 82.920	 OSCR (%): 67.423	
+==> Epoch 39/100
+LR: 0.0006781104793463417 - Batch 100/246	 Loss 0.580787 (0.335930)
+LR: 0.0006721296345600137 - Batch 200/246	 Loss 0.687992 (0.323253)
+Epoch 38 loss: 0.338901
+==> Test NirvanaOpenset
+Acc: 68.97573
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     0.115 50.004 60.954 60.631 45.546
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    36.374 80.728 74.279 78.018 80.334
+Acc (%): 68.976	 AUROC (%): 50.004	 OSCR (%): 25.686	
+Normalized - Acc (%): 68.976	 AUROC (%): 80.728	 OSCR (%): 58.255	
+==> Epoch 40/100
+LR: 0.000663347458466091 - Batch 100/246	 Loss 0.233519 (0.314671)
+LR: 0.0006572993166997458 - Batch 200/246	 Loss 0.185904 (0.319644)
+Epoch 39 loss: 0.325617
+==> Test NirvanaOpenset
+Acc: 76.79100
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     0.115 45.608 55.449 54.335 43.733
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    42.321 84.307 77.910 82.014 83.903
+Acc (%): 76.791	 AUROC (%): 45.608	 OSCR (%): 29.070	
+Normalized - Acc (%): 76.791	 AUROC (%): 84.307	 OSCR (%): 68.714	
+==> Epoch 41/100
+LR: 0.000648423233365512 - Batch 100/246	 Loss 0.124877 (0.293709)
+LR: 0.0006423137634048721 - Batch 200/246	 Loss 0.356237 (0.386949)
+Epoch 40 loss: 0.375401
+==> Test NirvanaOpenset
+Acc: 62.16696
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     0.173 45.071 54.917 51.653 43.621
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    21.594 73.903 68.266 71.813 71.076
+Acc (%): 62.167	 AUROC (%): 45.071	 OSCR (%): 16.998	
+Normalized - Acc (%): 62.167	 AUROC (%): 73.903	 OSCR (%): 45.897	
+==> Epoch 42/100
+LR: 0.0006333525324529548 - Batch 100/246	 Loss 0.161900 (0.313310)
+LR: 0.0006271877636072679 - Batch 200/246	 Loss 0.155027 (0.362343)
+Epoch 41 loss: 0.340460
+==> Test NirvanaOpenset
+Acc: 74.30432
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     0.058 43.912 53.914 51.551 43.105
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    43.764 82.847 75.001 81.505 82.476
+Acc (%): 74.304	 AUROC (%): 43.912	 OSCR (%): 25.719	
+Normalized - Acc (%): 74.304	 AUROC (%): 82.847	 OSCR (%): 64.873	
+==> Epoch 43/100
+LR: 0.0006181502286907139 - Batch 100/246	 Loss 0.839319 (0.290600)
+LR: 0.0006119362448425469 - Batch 200/246	 Loss 0.147803 (0.354854)
+Epoch 42 loss: 0.344871
+==> Test NirvanaOpenset
+Acc: 74.00829
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     0.058 46.656 57.566 56.035 44.148
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    43.822 83.593 75.870 81.803 82.843
+Acc (%): 74.008	 AUROC (%): 46.656	 OSCR (%): 27.007	
+Normalized - Acc (%): 74.008	 AUROC (%): 83.593	 OSCR (%): 64.845	
+==> Epoch 44/100
+LR: 0.0006028313249172048 - Batch 100/246	 Loss 0.143278 (0.364915)
+LR: 0.0005965742585183943 - Batch 200/246	 Loss 0.408478 (0.325033)
+Epoch 43 loss: 0.321834
+==> Test NirvanaOpenset
+Acc: 77.44227
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     0.115 45.033 54.918 53.254 43.548
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    44.226 84.217 76.570 82.565 84.770
+Acc (%): 77.442	 AUROC (%): 45.033	 OSCR (%): 29.835	
+Normalized - Acc (%): 77.442	 AUROC (%): 84.217	 OSCR (%): 67.969	
+==> Epoch 45/100
+LR: 0.0005874109390409783 - Batch 100/246	 Loss 0.346930 (0.315512)
+LR: 0.000581116965060634 - Batch 200/246	 Loss 0.838555 (0.328233)
+Epoch 44 loss: 0.329953
+==> Test NirvanaOpenset
+Acc: 72.58733
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     0.000 46.657 56.928 56.378 44.178
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    46.882 84.326 75.969 82.677 84.162
+Acc (%): 72.587	 AUROC (%): 46.657	 OSCR (%): 26.272	
+Normalized - Acc (%): 72.587	 AUROC (%): 84.326	 OSCR (%): 64.129	
+==> Epoch 46/100
+LR: 0.00057190428912117 - Batch 100/246	 Loss 0.811000 (0.322035)
+LR: 0.0005655796189517297 - Batch 200/246	 Loss 0.304723 (0.358682)
+Epoch 45 loss: 0.340143
+==> Test NirvanaOpenset
+Acc: 73.47543
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     0.058 46.749 57.596 56.463 44.170
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    43.245 83.225 75.426 81.229 83.379
+Acc (%): 73.475	 AUROC (%): 46.749	 OSCR (%): 27.250	
+Normalized - Acc (%): 73.475	 AUROC (%): 83.225	 OSCR (%): 63.710	
+==> Epoch 47/100
+LR: 0.000556326678349109 - Batch 100/246	 Loss 0.251138 (0.416815)
+LR: 0.0005499775536764434 - Batch 200/246	 Loss 0.164082 (0.354605)
+Epoch 46 loss: 0.350491
+==> Test NirvanaOpenset
+Acc: 72.46892
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     0.635 47.940 58.007 57.298 44.767
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    33.256 77.353 69.578 75.303 76.941
+Acc (%): 72.469	 AUROC (%): 47.940	 OSCR (%): 29.221	
+Normalized - Acc (%): 72.469	 AUROC (%): 77.353	 OSCR (%): 57.945	
+==> Epoch 48/100
+LR: 0.0005406934799459184 - Batch 100/246	 Loss 0.144427 (0.285834)
+LR: 0.0005343261665895409 - Batch 200/246	 Loss 0.146486 (0.282453)
+Epoch 47 loss: 0.306855
+==> Test NirvanaOpenset
+Acc: 74.77798
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     0.000 43.472 55.400 52.680 42.847
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    26.097 74.718 67.044 74.635 74.210
+Acc (%): 74.778	 AUROC (%): 43.472	 OSCR (%): 26.389	
+Normalized - Acc (%): 74.778	 AUROC (%): 74.718	 OSCR (%): 57.002	
+==> Epoch 49/100
+LR: 0.0005250201219910059 - Batch 100/246	 Loss 0.127969 (0.305751)
+LR: 0.000518640903720463 - Batch 200/246	 Loss 0.235886 (0.288297)
+Epoch 48 loss: 0.297976
+==> Test NirvanaOpenset
+Acc: 71.75844
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     0.058 43.655 55.474 53.177 42.910
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    13.684 67.292 63.167 68.170 64.793
+Acc (%): 71.758	 AUROC (%): 43.655	 OSCR (%): 23.762	
+Normalized - Acc (%): 71.758	 AUROC (%): 67.292	 OSCR (%): 46.562	
+==> Epoch 50/100
+LR: 0.0005093220721964032 - Batch 100/246	 Loss 0.414429 (0.353505)
+LR: 0.000502937244529957 - Batch 200/246	 Loss 0.446445 (0.337227)
+Epoch 49 loss: 0.333153
+==> Test NirvanaOpenset
+Acc: 69.56779
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     0.000 45.061 55.316 53.682 43.544
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    42.032 79.662 71.315 78.720 79.884
+Acc (%): 69.568	 AUROC (%): 45.061	 OSCR (%): 22.744	
+Normalized - Acc (%): 69.568	 AUROC (%): 79.662	 OSCR (%): 58.035	
+==> Epoch 51/100
+LR: 0.0004936148226420108 - Batch 100/246	 Loss 0.783228 (0.262491)
+LR: 0.00048723068663371815 - Batch 200/246	 Loss 0.160349 (0.281252)
+Epoch 50 loss: 0.291273
+==> Test NirvanaOpenset
+Acc: 74.54115
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     0.058 48.012 59.669 58.967 44.648
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    49.076 82.992 74.797 81.650 83.634
+Acc (%): 74.541	 AUROC (%): 48.012	 OSCR (%): 28.483	
+Normalized - Acc (%): 74.541	 AUROC (%): 82.992	 OSCR (%): 63.901	
+==> Epoch 52/100
+LR: 0.0004779138744867794 - Batch 100/246	 Loss 0.149738 (0.278339)
+LR: 0.00047153673050811303 - Batch 200/246	 Loss 0.328410 (0.292283)
+Epoch 51 loss: 0.302279
+==> Test NirvanaOpenset
+Acc: 75.01480
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     0.000 48.922 59.346 59.533 45.086
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    39.030 79.623 72.862 76.884 78.549
+Acc (%): 75.015	 AUROC (%): 48.922	 OSCR (%): 30.595	
+Normalized - Acc (%): 75.015	 AUROC (%): 79.623	 OSCR (%): 60.892	
+==> Epoch 53/100
+LR: 0.00046223472267093785 - Batch 100/246	 Loss 0.130600 (0.274191)
+LR: 0.00045587086419308464 - Batch 200/246	 Loss 0.125827 (0.265830)
+Epoch 52 loss: 0.260451
+==> Test NirvanaOpenset
+Acc: 70.21906
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     0.058 46.902 57.648 56.406 44.293
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    41.686 80.119 72.537 78.064 79.977
+Acc (%): 70.219	 AUROC (%): 46.902	 OSCR (%): 24.689	
+Normalized - Acc (%): 70.219	 AUROC (%): 80.119	 OSCR (%): 58.462	
+==> Epoch 54/100
+LR: 0.00044659284062436395 - Batch 100/246	 Loss 0.108976 (0.225602)
+LR: 0.000440248548007323 - Batch 200/246	 Loss 0.126107 (0.248369)
+Epoch 53 loss: 0.254732
+==> Test NirvanaOpenset
+Acc: 74.42274
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     0.058 47.218 58.755 57.490 44.374
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    44.400 82.175 75.374 79.988 81.597
+Acc (%): 74.423	 AUROC (%): 47.218	 OSCR (%): 28.175	
+Normalized - Acc (%): 74.423	 AUROC (%): 82.175	 OSCR (%): 63.863	
+==> Epoch 55/100
+LR: 0.0004310036649961693 - Batch 100/246	 Loss 0.168626 (0.272581)
+LR: 0.00042468519929079757 - Batch 200/246	 Loss 0.245571 (0.293232)
+Epoch 54 loss: 0.299779
+==> Test NirvanaOpenset
+Acc: 74.95560
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     0.000 48.225 60.849 59.697 44.725
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    47.402 82.741 75.817 79.861 83.271
+Acc (%): 74.956	 AUROC (%): 48.225	 OSCR (%): 29.080	
+Normalized - Acc (%): 74.956	 AUROC (%): 82.741	 OSCR (%): 64.278	
+==> Epoch 56/100
+LR: 0.0004154825804205948 - Batch 100/246	 Loss 0.144909 (0.305866)
+LR: 0.0004091961771897058 - Batch 200/246	 Loss 0.112735 (0.286921)
+Epoch 55 loss: 0.270424
+==> Test NirvanaOpenset
+Acc: 70.92954
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     0.000 49.479 61.133 60.845 45.325
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    42.610 82.545 75.875 80.383 82.303
+Acc (%): 70.930	 AUROC (%): 49.479	 OSCR (%): 26.876	
+Normalized - Acc (%): 70.930	 AUROC (%): 82.545	 OSCR (%): 61.355	
+==> Epoch 57/100
+LR: 0.0004000449043342332 - Batch 100/246	 Loss 0.104766 (0.260682)
+LR: 0.0003937967674988496 - Batch 200/246	 Loss 0.158405 (0.258350)
+Epoch 56 loss: 0.278771
+==> Test NirvanaOpenset
+Acc: 78.44879
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     0.173 44.463 56.713 54.982 43.136
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    44.342 79.856 71.988 77.891 81.504
+Acc (%): 78.449	 AUROC (%): 44.463	 OSCR (%): 30.711	
+Normalized - Acc (%): 78.449	 AUROC (%): 79.856	 OSCR (%): 64.636	
+==> Epoch 58/100
+LR: 0.00038470587185956913 - Batch 100/246	 Loss 0.110246 (0.307420)
+LR: 0.0003785021675764003 - Batch 200/246	 Loss 0.131145 (0.292627)
+Epoch 57 loss: 0.282902
+==> Test NirvanaOpenset
+Acc: 73.53464
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     0.000 48.601 59.850 59.740 44.941
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    42.148 83.447 76.274 82.164 84.219
+Acc (%): 73.535	 AUROC (%): 48.601	 OSCR (%): 29.054	
+Normalized - Acc (%): 73.535	 AUROC (%): 83.447	 OSCR (%): 65.000	
+==> Epoch 59/100
+LR: 0.00036948062076975075 - Batch 100/246	 Loss 0.123171 (0.244005)
+LR: 0.0003633274713459427 - Batch 200/246	 Loss 0.135794 (0.287346)
+Epoch 58 loss: 0.277145
+==> Test NirvanaOpenset
+Acc: 75.42925
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     0.058 47.713 59.585 58.094 44.601
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    42.321 79.918 73.469 77.360 80.895
+Acc (%): 75.429	 AUROC (%): 47.713	 OSCR (%): 29.569	
+Normalized - Acc (%): 75.429	 AUROC (%): 79.918	 OSCR (%): 62.414	
+==> Epoch 60/100
+LR: 0.00035438417654943714 - Batch 100/246	 Loss 0.337436 (0.224176)
+LR: 0.0003482876544005917 - Batch 200/246	 Loss 0.184344 (0.237014)
+Epoch 59 loss: 0.247735
+==> Test NirvanaOpenset
+Acc: 67.96921
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     0.173 49.420 58.597 58.919 45.407
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    30.600 78.424 70.716 78.037 77.140
+Acc (%): 67.969	 AUROC (%): 49.420	 OSCR (%): 27.788	
+Normalized - Acc (%): 67.969	 AUROC (%): 78.424	 OSCR (%): 54.475	
+==> Epoch 61/100
+LR: 0.00033943143756645736 - Batch 100/246	 Loss 0.116743 (0.278853)
+LR: 0.0003333975592238934 - Batch 200/246	 Loss 0.143078 (0.289031)
+Epoch 60 loss: 0.299692
+==> Test NirvanaOpenset
+Acc: 79.63292
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     0.058 45.951 58.315 55.975 43.801
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    45.208 80.196 73.537 77.338 81.425
+Acc (%): 79.633	 AUROC (%): 45.951	 OSCR (%): 31.643	
+Normalized - Acc (%): 79.633	 AUROC (%): 80.196	 OSCR (%): 66.307	
+==> Epoch 62/100
+LR: 0.00032463716036892237 - Batch 100/246	 Loss 0.218789 (0.236652)
+LR: 0.00031867188054208513 - Batch 200/246	 Loss 0.271364 (0.235172)
+Epoch 61 loss: 0.250806
+==> Test NirvanaOpenset
+Acc: 77.56069
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     0.058 49.503 60.952 60.766 45.343
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    49.134 83.485 77.091 80.889 83.931
+Acc (%): 77.561	 AUROC (%): 49.503	 OSCR (%): 32.557	
+Normalized - Acc (%): 77.561	 AUROC (%): 83.485	 OSCR (%): 67.022	
+==> Epoch 63/100
+LR: 0.000310015945122291 - Batch 100/246	 Loss 0.115801 (0.255801)
+LR: 0.00030412515082217287 - Batch 200/246	 Loss 0.298552 (0.266734)
+Epoch 62 loss: 0.249945
+==> Test NirvanaOpenset
+Acc: 75.60687
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     0.058 48.569 59.468 58.989 44.977
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    42.032 83.476 76.858 82.107 83.250
+Acc (%): 75.607	 AUROC (%): 48.569	 OSCR (%): 30.922	
+Normalized - Acc (%): 75.607	 AUROC (%): 83.476	 OSCR (%): 66.522	
+==> Epoch 64/100
+LR: 0.0002955822212007709 - Batch 100/246	 Loss 0.166176 (0.235620)
+LR: 0.00028977172593014133 - Batch 200/246	 Loss 0.114220 (0.239565)
+Epoch 63 loss: 0.235463
+==> Test NirvanaOpenset
+Acc: 74.24512
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     0.058 48.634 59.517 59.263 45.005
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    43.245 82.258 75.455 80.116 82.532
+Acc (%): 74.245	 AUROC (%): 48.634	 OSCR (%): 29.620	
+Normalized - Acc (%): 74.245	 AUROC (%): 82.258	 OSCR (%): 63.821	
+==> Epoch 65/100
+LR: 0.0002813502329472678 - Batch 100/246	 Loss 0.117587 (0.218951)
+LR: 0.00027562577096345 - Batch 200/246	 Loss 1.055888 (0.244112)
+Epoch 64 loss: 0.241820
+==> Test NirvanaOpenset
+Acc: 79.63292
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     0.058 47.145 58.182 57.825 44.344
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    43.591 83.807 77.216 82.246 84.537
+Acc (%): 79.633	 AUROC (%): 47.145	 OSCR (%): 33.021	
+Normalized - Acc (%): 79.633	 AUROC (%): 83.807	 OSCR (%): 69.726	
+==> Epoch 66/100
+LR: 0.00026733402561593986 - Batch 100/246	 Loss 0.179151 (0.240089)
+LR: 0.00026170124627178864 - Batch 200/246	 Loss 0.136246 (0.243666)
+Epoch 65 loss: 0.239064
+==> Test NirvanaOpenset
+Acc: 76.13973
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     0.000 49.504 61.228 60.826 45.333
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    45.670 82.531 76.329 79.864 83.450
+Acc (%): 76.140	 AUROC (%): 49.504	 OSCR (%): 31.214	
+Normalized - Acc (%): 76.140	 AUROC (%): 82.531	 OSCR (%): 65.217	
+==> Epoch 67/100
+LR: 0.0002535474315112252 - Batch 100/246	 Loss 0.127862 (0.267941)
+LR: 0.0002480118936798997 - Batch 200/246	 Loss 0.504310 (0.234372)
+Epoch 66 loss: 0.228606
+==> Test NirvanaOpenset
+Acc: 76.90941
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     0.058 48.447 59.808 59.659 44.895
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    45.150 82.054 75.300 79.606 83.015
+Acc (%): 76.909	 AUROC (%): 48.447	 OSCR (%): 31.260	
+Normalized - Acc (%): 76.909	 AUROC (%): 82.054	 OSCR (%): 65.649	
+==> Epoch 68/100
+LR: 0.0002400040563370298 - Batch 100/246	 Loss 0.290008 (0.223689)
+LR: 0.0002345712229260564 - Batch 200/246	 Loss 0.140170 (0.221904)
+Epoch 67 loss: 0.220003
+==> Test NirvanaOpenset
+Acc: 79.57371
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     0.000 46.753 57.868 57.197 44.208
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    41.051 82.445 76.418 80.788 83.152
+Acc (%): 79.574	 AUROC (%): 46.753	 OSCR (%): 32.550	
+Normalized - Acc (%): 79.574	 AUROC (%): 82.445	 OSCR (%): 68.292	
+==> Epoch 69/100
+LR: 0.0002267172657695397 - Batch 100/246	 Loss 0.102891 (0.212124)
+LR: 0.00022139249832958056 - Batch 200/246	 Loss 0.197812 (0.214750)
+Epoch 68 loss: 0.223145
+==> Test NirvanaOpenset
+Acc: 76.43576
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     0.000 49.308 60.596 60.313 45.276
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    43.014 80.472 73.724 78.202 81.160
+Acc (%): 76.436	 AUROC (%): 49.308	 OSCR (%): 31.452	
+Normalized - Acc (%): 76.436	 AUROC (%): 80.472	 OSCR (%): 63.185	
+==> Epoch 70/100
+LR: 0.00021370017226691044 - Batch 100/246	 Loss 0.119780 (0.223142)
+LR: 0.00020848872570056182 - Batch 200/246	 Loss 0.101245 (0.211083)
+Epoch 69 loss: 0.207063
+==> Test NirvanaOpenset
+Acc: 74.60036
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     0.000 48.808 59.602 59.604 45.095
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    36.143 81.777 75.464 80.448 82.024
+Acc (%): 74.600	 AUROC (%): 48.808	 OSCR (%): 29.959	
+Normalized - Acc (%): 74.600	 AUROC (%): 81.777	 OSCR (%): 64.080	
+==> Epoch 71/100
+LR: 0.00020096562212885621 - Batch 100/246	 Loss 0.156404 (0.220312)
+LR: 0.00019587263950469379 - Batch 200/246	 Loss 0.099639 (0.214115)
+Epoch 70 loss: 0.214443
+==> Test NirvanaOpenset
+Acc: 73.06098
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     0.000 47.968 58.603 58.516 44.761
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    38.395 80.540 74.711 77.846 81.528
+Acc (%): 73.061	 AUROC (%): 47.968	 OSCR (%): 27.746	
+Normalized - Acc (%): 73.061	 AUROC (%): 80.540	 OSCR (%): 61.459	
+==> Epoch 72/100
+LR: 0.00018852618281890325 - Batch 100/246	 Loss 0.166162 (0.195169)
+LR: 0.00018355669029589404 - Batch 200/246	 Loss 1.159345 (0.205596)
+Epoch 71 loss: 0.218886
+==> Test NirvanaOpenset
+Acc: 75.84369
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     0.000 49.700 60.783 60.770 45.443
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    39.492 81.180 74.677 79.941 81.797
+Acc (%): 75.844	 AUROC (%): 49.700	 OSCR (%): 31.564	
+Normalized - Acc (%): 75.844	 AUROC (%): 81.180	 OSCR (%): 64.154	
+==> Epoch 73/100
+LR: 0.00017639413056181813 - Batch 100/246	 Loss 0.110308 (0.215535)
+LR: 0.00017155303242910773 - Batch 200/246	 Loss 0.109375 (0.208133)
+Epoch 72 loss: 0.219547
+==> Test NirvanaOpenset
+Acc: 75.07401
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     0.000 49.775 61.175 61.154 45.462
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    39.319 81.850 75.407 80.423 81.684
+Acc (%): 75.074	 AUROC (%): 49.775	 OSCR (%): 30.964	
+Normalized - Acc (%): 75.074	 AUROC (%): 81.850	 OSCR (%): 64.196	
+==> Epoch 74/100
+LR: 0.0001645814382284584 - Batch 100/246	 Loss 0.125898 (0.204145)
+LR: 0.0001598735120654313 - Batch 200/246	 Loss 0.089265 (0.210727)
+Epoch 73 loss: 0.201765
+==> Test NirvanaOpenset
+Acc: 74.77798
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     0.000 48.045 59.157 59.183 44.729
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    42.379 81.668 75.893 78.765 82.772
+Acc (%): 74.778	 AUROC (%): 48.045	 OSCR (%): 29.136	
+Normalized - Acc (%): 74.778	 AUROC (%): 81.668	 OSCR (%): 63.781	
+==> Epoch 75/100
+LR: 0.00015309976351999353 - Batch 100/246	 Loss 0.477791 (0.199210)
+LR: 0.0001485296554813778 - Batch 200/246	 Loss 0.446154 (0.213742)
+Epoch 74 loss: 0.219520
+==> Test NirvanaOpenset
+Acc: 73.59384
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     0.000 49.853 61.263 61.167 45.499
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    39.145 80.953 75.012 79.071 81.179
+Acc (%): 73.594	 AUROC (%): 49.853	 OSCR (%): 29.589	
+Normalized - Acc (%): 73.594	 AUROC (%): 80.953	 OSCR (%): 62.207	
+==> Epoch 76/100
+LR: 0.0001419604374631616 - Batch 100/246	 Loss 0.092731 (0.198290)
+LR: 0.0001375326576938352 - Batch 200/246	 Loss 0.235341 (0.193730)
+Epoch 75 loss: 0.199056
+==> Test NirvanaOpenset
+Acc: 74.18591
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     0.000 49.051 60.430 60.292 45.157
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    39.492 80.690 74.610 78.548 81.249
+Acc (%): 74.186	 AUROC (%): 49.051	 OSCR (%): 29.435	
+Normalized - Acc (%): 74.186	 AUROC (%): 80.690	 OSCR (%): 62.213	
+==> Epoch 77/100
+LR: 0.00013117445322791314 - Batch 100/246	 Loss 0.162995 (0.193611)
+LR: 0.00012689337141193633 - Batch 200/246	 Loss 0.096722 (0.197062)
+Epoch 76 loss: 0.204996
+==> Test NirvanaOpenset
+Acc: 72.29130
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     0.000 50.322 61.275 61.608 45.733
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    36.259 80.007 74.044 78.125 79.678
+Acc (%): 72.291	 AUROC (%): 50.322	 OSCR (%): 28.725	
+Normalized - Acc (%): 72.291	 AUROC (%): 80.007	 OSCR (%): 60.215	
+==> Epoch 78/100
+LR: 0.00012075245527848075 - Batch 100/246	 Loss 0.115375 (0.186306)
+LR: 0.00011662229632674465 - Batch 200/246	 Loss 0.099438 (0.197121)
+Epoch 77 loss: 0.202484
+==> Test NirvanaOpenset
+Acc: 73.94908
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     0.000 49.287 60.727 60.537 45.255
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    37.587 80.692 74.087 79.121 81.222
+Acc (%): 73.949	 AUROC (%): 49.287	 OSCR (%): 29.520	
+Normalized - Acc (%): 73.949	 AUROC (%): 80.692	 OSCR (%): 62.336	
+==> Epoch 79/100
+LR: 0.00011070472886857769 - Batch 100/246	 Loss 0.109107 (0.207411)
+LR: 0.00010672956874932722 - Batch 200/246	 Loss 0.313814 (0.212759)
+Epoch 78 loss: 0.202495
+==> Test NirvanaOpenset
+Acc: 73.59384
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     0.000 48.892 60.308 60.128 45.083
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    40.069 81.058 75.275 78.630 81.974
+Acc (%): 73.594	 AUROC (%): 48.892	 OSCR (%): 28.754	
+Normalized - Acc (%): 73.594	 AUROC (%): 81.058	 OSCR (%): 62.120	
+==> Epoch 80/100
+LR: 0.00010104118989109353 - Batch 100/246	 Loss 0.093249 (0.169388)
+LR: 9.72249516074396e-05 - Batch 200/246	 Loss 0.106515 (0.199291)
+Epoch 79 loss: 0.203681
+==> Test NirvanaOpenset
+Acc: 74.12670
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     0.000 49.111 60.614 60.334 45.188
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    40.589 80.215 74.525 76.986 81.534
+Acc (%): 74.127	 AUROC (%): 49.111	 OSCR (%): 29.314	
+Normalized - Acc (%): 74.127	 AUROC (%): 80.215	 OSCR (%): 61.432	
+==> Epoch 81/100
+LR: 9.177137509230585e-05 - Batch 100/246	 Loss 0.129226 (0.199880)
+LR: 8.811782481069472e-05 - Batch 200/246	 Loss 0.523390 (0.194346)
+Epoch 80 loss: 0.191786
+==> Test NirvanaOpenset
+Acc: 75.54766
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     0.000 48.498 59.879 59.715 44.914
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    39.376 80.596 74.838 77.345 81.832
+Acc (%): 75.548	 AUROC (%): 48.498	 OSCR (%): 30.048	
+Normalized - Acc (%): 75.548	 AUROC (%): 80.596	 OSCR (%): 63.076	
+==> Epoch 82/100
+LR: 8.290443266026312e-05 - Batch 100/246	 Loss 0.119758 (0.194307)
+LR: 7.941717599372402e-05 - Batch 200/246	 Loss 0.094950 (0.193404)
+Epoch 81 loss: 0.191774
+==> Test NirvanaOpenset
+Acc: 74.89639
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     0.000 48.711 60.013 60.004 45.004
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    39.319 79.837 74.359 76.376 81.113
+Acc (%): 74.896	 AUROC (%): 48.711	 OSCR (%): 29.575	
+Normalized - Acc (%): 74.896	 AUROC (%): 79.837	 OSCR (%): 61.905	
+==> Epoch 83/100
+LR: 7.444911319662658e-05 - Batch 100/246	 Loss 0.195446 (0.165397)
+LR: 7.113159164646781e-05 - Batch 200/246	 Loss 0.148943 (0.193885)
+Epoch 82 loss: 0.197885
+==> Test NirvanaOpenset
+Acc: 73.00178
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     0.000 49.950 61.054 61.332 45.544
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    39.896 80.398 74.684 77.694 80.728
+Acc (%): 73.002	 AUROC (%): 49.950	 OSCR (%): 28.992	
+Normalized - Acc (%): 73.002	 AUROC (%): 80.398	 OSCR (%): 61.121	
+==> Epoch 84/100
+LR: 6.641376108088366e-05 - Batch 100/246	 Loss 0.112546 (0.212040)
+LR: 6.32692486403461e-05 - Batch 200/246	 Loss 0.114664 (0.194589)
+Epoch 83 loss: 0.187565
+==> Test NirvanaOpenset
+Acc: 74.48194
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     0.000 48.462 59.918 59.717 44.886
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    39.261 80.682 75.030 77.835 81.783
+Acc (%): 74.482	 AUROC (%): 48.462	 OSCR (%): 29.168	
+Normalized - Acc (%): 74.482	 AUROC (%): 80.682	 OSCR (%): 62.549	
+==> Epoch 85/100
+LR: 5.8806306235453085e-05 - Batch 100/246	 Loss 0.111069 (0.191164)
+LR: 5.5837906158673855e-05 - Batch 200/246	 Loss 0.136943 (0.188650)
+Epoch 84 loss: 0.189342
+==> Test NirvanaOpenset
+Acc: 74.12670
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     0.000 49.204 60.503 60.560 45.213
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    38.684 80.126 74.431 77.130 80.966
+Acc (%): 74.127	 AUROC (%): 49.204	 OSCR (%): 29.280	
+Normalized - Acc (%): 74.127	 AUROC (%): 80.126	 OSCR (%): 61.722	
+==> Epoch 86/100
+LR: 5.163425629980777e-05 - Batch 100/246	 Loss 0.178068 (0.207197)
+LR: 4.8844898039283435e-05 - Batch 200/246	 Loss 0.100144 (0.198028)
+Epoch 85 loss: 0.188251
+==> Test NirvanaOpenset
+Acc: 75.42925
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     0.058 48.299 60.124 59.703 44.787
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    39.030 80.280 74.336 77.523 81.352
+Acc (%): 75.429	 AUROC (%): 48.299	 OSCR (%): 29.798	
+Normalized - Acc (%): 75.429	 AUROC (%): 80.280	 OSCR (%): 62.771	
+==> Epoch 87/100
+LR: 4.49046892213424e-05 - Batch 100/246	 Loss 0.129615 (0.192047)
+LR: 4.2297125536912664e-05 - Batch 200/246	 Loss 0.644590 (0.193651)
+Epoch 86 loss: 0.189231
+==> Test NirvanaOpenset
+Acc: 74.24512
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     0.000 48.542 60.089 59.951 44.905
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    39.607 80.100 74.476 76.976 81.301
+Acc (%): 74.245	 AUROC (%): 48.542	 OSCR (%): 28.999	
+Normalized - Acc (%): 74.245	 AUROC (%): 80.100	 OSCR (%): 61.799	
+==> Epoch 88/100
+LR: 3.862424627029276e-05 - Batch 100/246	 Loss 0.096484 (0.207881)
+LR: 3.620105051249932e-05 - Batch 200/246	 Loss 0.093074 (0.193737)
+Epoch 87 loss: 0.185642
+==> Test NirvanaOpenset
+Acc: 75.31083
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     0.000 48.728 60.220 60.139 44.985
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    38.222 79.511 73.844 76.274 80.875
+Acc (%): 75.311	 AUROC (%): 48.728	 OSCR (%): 29.976	
+Normalized - Acc (%): 75.311	 AUROC (%): 79.511	 OSCR (%): 61.895	
+==> Epoch 89/100
+LR: 3.2799125485604515e-05 - Batch 100/246	 Loss 0.088046 (0.180027)
+LR: 3.056268905610437e-05 - Batch 200/246	 Loss 0.117214 (0.180391)
+Epoch 88 loss: 0.184552
+==> Test NirvanaOpenset
+Acc: 74.65956
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     0.000 48.634 60.245 60.064 44.947
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    39.665 79.430 74.025 76.002 80.748
+Acc (%): 74.660	 AUROC (%): 48.634	 OSCR (%): 29.337	
+Normalized - Acc (%): 74.660	 AUROC (%): 79.430	 OSCR (%): 61.434	
+==> Epoch 90/100
+LR: 2.7435075558217016e-05 - Batch 100/246	 Loss 0.090199 (0.184109)
+LR: 2.5387605549757574e-05 - Batch 200/246	 Loss 0.194671 (0.192384)
+Epoch 89 loss: 0.184771
+==> Test NirvanaOpenset
+Acc: 74.83718
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     0.000 48.591 60.388 60.004 44.924
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    38.337 79.875 74.351 76.962 80.937
+Acc (%): 74.837	 AUROC (%): 48.591	 OSCR (%): 29.528	
+Normalized - Acc (%): 74.837	 AUROC (%): 79.875	 OSCR (%): 62.049	
+==> Epoch 91/100
+LR: 2.2537390157798567e-05 - Batch 100/246	 Loss 0.113630 (0.189624)
+LR: 2.0680907176084424e-05 - Batch 200/246	 Loss 0.092325 (0.189621)
+Epoch 90 loss: 0.181138
+==> Test NirvanaOpenset
+Acc: 74.54115
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     0.000 48.692 60.362 60.145 44.971
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    38.164 79.509 74.136 76.268 80.742
+Acc (%): 74.541	 AUROC (%): 48.692	 OSCR (%): 29.303	
+Normalized - Acc (%): 74.541	 AUROC (%): 79.509	 OSCR (%): 61.523	
+==> Epoch 92/100
+LR: 1.811090270853497e-05 - Batch 100/246	 Loss 0.159242 (0.177499)
+LR: 1.6447238878133098e-05 - Batch 200/246	 Loss 0.094845 (0.177877)
+Epoch 91 loss: 0.183256
+==> Test NirvanaOpenset
+Acc: 75.07401
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     0.000 48.350 60.104 59.769 44.817
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    38.799 79.654 74.009 76.521 80.899
+Acc (%): 75.074	 AUROC (%): 48.350	 OSCR (%): 29.517	
+Normalized - Acc (%): 75.074	 AUROC (%): 79.654	 OSCR (%): 62.026	
+==> Epoch 93/100
+LR: 1.4159981619122436e-05 - Batch 100/246	 Loss 0.582204 (0.185339)
+LR: 1.2690778775376703e-05 - Batch 200/246	 Loss 0.171872 (0.173965)
+Epoch 92 loss: 0.179385
+==> Test NirvanaOpenset
+Acc: 74.60036
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     0.000 48.721 60.364 60.179 44.982
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    37.644 79.464 74.118 76.236 80.736
+Acc (%): 74.600	 AUROC (%): 48.721	 OSCR (%): 29.392	
+Normalized - Acc (%): 74.600	 AUROC (%): 79.464	 OSCR (%): 61.585	
+==> Epoch 94/100
+LR: 1.0688525971675393e-05 - Batch 100/246	 Loss 0.285624 (0.221796)
+LR: 9.41523404041371e-06 - Batch 200/246	 Loss 0.203249 (0.193609)
+Epoch 93 loss: 0.185834
+==> Test NirvanaOpenset
+Acc: 74.36353
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     0.000 48.569 60.362 59.997 44.916
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    37.933 79.388 73.914 76.138 80.716
+Acc (%): 74.364	 AUROC (%): 48.569	 OSCR (%): 29.063	
+Normalized - Acc (%): 74.364	 AUROC (%): 79.388	 OSCR (%): 61.379	
+==> Epoch 95/100
+LR: 7.69996167380415e-06 - Batch 100/246	 Loss 0.092935 (0.177177)
+LR: 6.623837240436244e-06 - Batch 200/246	 Loss 0.757766 (0.186518)
+Epoch 94 loss: 0.183692
+==> Test NirvanaOpenset
+Acc: 74.60036
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     0.000 48.594 60.365 60.025 44.926
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    37.644 79.352 73.887 76.086 80.714
+Acc (%): 74.600	 AUROC (%): 48.594	 OSCR (%): 29.285	
+Normalized - Acc (%): 74.600	 AUROC (%): 79.352	 OSCR (%): 61.475	
+==> Epoch 96/100
+LR: 5.197238077656987e-06 - Batch 100/246	 Loss 0.091758 (0.183554)
+LR: 4.319343147076545e-06 - Batch 200/246	 Loss 0.277647 (0.183286)
+Epoch 95 loss: 0.180641
+==> Test NirvanaOpenset
+Acc: 74.54115
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     0.000 48.648 60.395 60.084 44.950
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    37.702 79.368 73.917 76.114 80.723
+Acc (%): 74.541	 AUROC (%): 48.648	 OSCR (%): 29.265	
+Normalized - Acc (%): 74.541	 AUROC (%): 79.368	 OSCR (%): 61.429	
+==> Epoch 97/100
+LR: 3.182825069265757e-06 - Batch 100/246	 Loss 0.112802 (0.160527)
+LR: 2.504026017779713e-06 - Batch 200/246	 Loss 0.720567 (0.173248)
+Epoch 96 loss: 0.180882
+==> Test NirvanaOpenset
+Acc: 74.71877
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     0.000 48.638 60.424 60.077 44.944
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    37.356 79.443 73.886 76.228 80.762
+Acc (%): 74.719	 AUROC (%): 48.638	 OSCR (%): 29.385	
+Normalized - Acc (%): 74.719	 AUROC (%): 79.443	 OSCR (%): 61.624	
+==> Epoch 98/100
+LR: 1.6587106310667062e-06 - Batch 100/246	 Loss 0.151935 (0.201445)
+LR: 1.1796773513864662e-06 - Batch 200/246	 Loss 0.193551 (0.189842)
+Epoch 97 loss: 0.181931
+==> Test NirvanaOpenset
+Acc: 74.71877
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     0.000 48.653 60.453 60.094 44.951
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    37.587 79.434 73.912 76.209 80.760
+Acc (%): 74.719	 AUROC (%): 48.653	 OSCR (%): 29.394	
+Normalized - Acc (%): 74.719	 AUROC (%): 79.434	 OSCR (%): 61.618	
+==> Epoch 99/100
+LR: 6.263988800017663e-07 - Batch 100/246	 Loss 0.091343 (0.199422)
+LR: 3.476041201400108e-07 - Batch 200/246	 Loss 0.190256 (0.183263)
+Epoch 98 loss: 0.179226
+==> Test NirvanaOpenset
+Acc: 74.71877
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     0.000 48.653 60.453 60.092 44.951
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    37.587 79.432 73.912 76.202 80.761
+Acc (%): 74.719	 AUROC (%): 48.653	 OSCR (%): 29.394	
+Normalized - Acc (%): 74.719	 AUROC (%): 79.432	 OSCR (%): 61.615	
+==> Epoch 100/100
+LR: 8.690858313681331e-08 - Batch 100/246	 Loss 0.105764 (0.176646)
+LR: 8.627479862188819e-09 - Batch 200/246	 Loss 0.100932 (0.175872)
+Epoch 99 loss: 0.186036
+==> Test NirvanaOpenset
+Acc: 74.71877
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     0.000 48.654 60.424 60.093 44.952
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    37.587 79.434 73.912 76.205 80.762
+Acc (%): 74.719	 AUROC (%): 48.654	 OSCR (%): 29.394	
+Normalized - Acc (%): 74.719	 AUROC (%): 79.434	 OSCR (%): 61.616	
+Finished. Total elapsed time (h:m:s): 11:50:57
+Currently using GPU: 1
+bloodmnist Preparation
+BloodMNIST_224_OSR Known classes: [1, 6, 3, 4]
+BloodMNIST_224_OSR Unknown classes: [0, 2, 5, 7]
+Using downloaded and verified file: /content/drive/MyDrive/arnav_adi/dsc/data/bloodmnist/bloodmnist_224.npz
+Using downloaded and verified file: /content/drive/MyDrive/arnav_adi/dsc/data/bloodmnist/bloodmnist_224.npz
+BloodMNIST_224_OSR Training set class distribution: [ 852 2181 1085 2026  849  993 2330 1643]
+BloodMNIST_224_OSR Train samples: 7386
+BloodMNIST_224_OSR Test samples (known): 2112
+BloodMNIST_224_OSR Test samples (unknown): 1309
+Outlier exposure mode is on. Other datasets
+Loaded background dataset with 300000 images
+Background loader created with 12500 batches
+Creating model: vit
+Loading model with message: <All keys matched successfully>
+Centers loaded.
+==> Epoch 1/100
+LR: 0.0009999739903471484 - Batch 100/308	 Loss 16.280844 (29.817055)
+LR: 0.0009998959640946036 - Batch 200/308	 Loss 20.513927 (24.609599)
+LR: 0.0009997659293601066 - Batch 300/308	 Loss 16.210451 (22.441029)
+Epoch 0 loss: 22.356257
+==> Test NirvanaOpenset
+Acc: 28.45644
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     4.889 35.432 50.238 50.188 32.905
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    13.675 55.430 57.139 62.985 47.601
+Acc (%): 28.456	 AUROC (%): 35.432	 OSCR (%): 11.364	
+Normalized - Acc (%): 28.456	 AUROC (%): 55.430	 OSCR (%): 15.339	
+Best Acc (%): 28.456	 AUROC (%): 35.432	 OSCR (%): 11.364	
+Normalized - Best Acc (%): 28.456	 AUROC (%): 55.430	 OSCR (%): 15.339	
+==> Epoch 2/100
+LR: 0.00099956709164526 - Batch 100/308	 Loss 15.590926 (17.865352)
+LR: 0.000999328928841135 - Batch 200/308	 Loss 16.998045 (17.486980)
+LR: 0.0009990388165486187 - Batch 300/308	 Loss 15.936637 (17.199816)
+Epoch 1 loss: 17.151452
+==> Test NirvanaOpenset
+Acc: 32.00758
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     6.799 44.525 51.645 55.097 38.552
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    14.668 59.981 57.490 67.313 51.067
+Acc (%): 32.008	 AUROC (%): 44.525	 OSCR (%): 10.526	
+Normalized - Acc (%): 32.008	 AUROC (%): 59.981	 OSCR (%): 23.452	
+Best Acc (%): 32.008	 AUROC (%): 44.525	 OSCR (%): 10.526	
+Normalized - Best Acc (%): 32.008	 AUROC (%): 59.981	 OSCR (%): 23.452	
+==> Epoch 3/100
+LR: 0.000998667180537382 - Batch 100/308	 Loss 15.107071 (16.064273)
+LR: 0.000998269116219612 - Batch 200/308	 Loss 15.899720 (16.740156)
+LR: 0.000997819212674883 - Batch 300/308	 Loss 14.920482 (16.807668)
+Epoch 2 loss: 16.803877
+==> Test NirvanaOpenset
+Acc: 35.27462
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    16.807 67.233 62.785 75.246 56.815
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     7.257 49.821 52.187 60.878 40.324
+Acc (%): 35.275	 AUROC (%): 67.233	 OSCR (%): 26.241	
+Normalized - Acc (%): 35.275	 AUROC (%): 49.821	 OSCR (%): 22.103	
+Best Acc (%): 35.275	 AUROC (%): 67.233	 OSCR (%): 26.241	
+==> Epoch 4/100
+LR: 0.0009972751451271327 - Batch 100/308	 Loss 17.366079 (16.216509)
+LR: 0.0009967175721371391 - Batch 200/308	 Loss 13.959952 (16.480055)
+LR: 0.0009961083213406807 - Batch 300/308	 Loss 12.925746 (16.392136)
+Epoch 3 loss: 16.375069
+==> Test NirvanaOpenset
+Acc: 31.53409
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    10.924 62.209 59.730 68.770 49.429
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    20.321 70.082 65.772 75.989 57.973
+Acc (%): 31.534	 AUROC (%): 62.209	 OSCR (%): 20.750	
+Normalized - Acc (%): 31.534	 AUROC (%): 70.082	 OSCR (%): 24.079	
+Normalized - Best Acc (%): 31.534	 AUROC (%): 70.082	 OSCR (%): 24.079	
+==> Epoch 5/100
+LR: 0.000995392359185399 - Batch 100/308	 Loss 14.316987 (15.896666)
+LR: 0.0009946758277804074 - Batch 200/308	 Loss 15.810932 (15.742627)
+LR: 0.0009939078309891985 - Batch 300/308	 Loss 14.525089 (15.606559)
+Epoch 4 loss: 15.601739
+==> Test NirvanaOpenset
+Acc: 43.03977
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    20.397 67.310 64.315 70.714 58.114
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     5.424 44.366 53.699 62.413 35.860
+Acc (%): 43.040	 AUROC (%): 67.310	 OSCR (%): 29.497	
+Normalized - Acc (%): 43.040	 AUROC (%): 44.366	 OSCR (%): 22.157	
+Best Acc (%): 43.040	 AUROC (%): 67.310	 OSCR (%): 29.497	
+==> Epoch 6/100
+LR: 0.0009930206807945937 - Batch 100/308	 Loss 12.509394 (14.557067)
+LR: 0.0009921458981045927 - Batch 200/308	 Loss 19.306164 (18.137199)
+LR: 0.0009912199132387446 - Batch 300/308	 Loss 18.849960 (17.810313)
+Epoch 5 loss: 17.863062
+==> Test NirvanaOpenset
+Acc: 26.94129
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    36.822 66.468 66.874 68.261 65.690
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    10.160 33.895 52.856 49.293 36.025
+Acc (%): 26.941	 AUROC (%): 66.468	 OSCR (%): 18.023	
+Normalized - Acc (%): 26.941	 AUROC (%): 33.895	 OSCR (%): 9.325	
+==> Epoch 7/100
+LR: 0.0009901624505149504 - Batch 100/308	 Loss 16.997414 (20.584055)
+LR: 0.0009891302798448421 - Batch 200/308	 Loss 15.808241 (18.779884)
+LR: 0.0009880472207396223 - Batch 300/308	 Loss 17.344614 (17.975090)
+Epoch 6 loss: 17.918970
+==> Test NirvanaOpenset
+Acc: 31.96023
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     6.646 48.165 51.295 61.409 39.670
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     6.035 46.854 50.546 58.542 37.581
+Acc (%): 31.960	 AUROC (%): 48.165	 OSCR (%): 16.314	
+Normalized - Acc (%): 31.960	 AUROC (%): 46.854	 OSCR (%): 19.743	
+==> Epoch 8/100
+LR: 0.0009868204890746816 - Batch 100/308	 Loss 16.338669 (16.197815)
+LR: 0.000985631949052299 - Batch 200/308	 Loss 15.042070 (16.138474)
+LR: 0.000984392884556285 - Batch 300/308	 Loss 16.638449 (16.039316)
+Epoch 7 loss: 16.030457
+==> Test NirvanaOpenset
+Acc: 35.79545
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    16.272 56.433 56.410 65.808 49.865
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     4.889 42.444 50.243 55.451 34.933
+Acc (%): 35.795	 AUROC (%): 56.433	 OSCR (%): 20.474	
+Normalized - Acc (%): 35.795	 AUROC (%): 42.444	 OSCR (%): 18.709	
+==> Epoch 9/100
+LR: 0.0009829980945862443 - Batch 100/308	 Loss 14.365662 (15.698657)
+LR: 0.0009816543581571003 - Batch 200/308	 Loss 16.844553 (15.666162)
+LR: 0.0009802605110773562 - Batch 300/308	 Loss 14.981254 (15.739711)
+Epoch 8 loss: 15.739886
+==> Test NirvanaOpenset
+Acc: 31.53409
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    26.280 69.127 68.787 69.985 60.261
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     3.209 45.306 50.107 58.278 35.106
+Acc (%): 31.534	 AUROC (%): 69.127	 OSCR (%): 23.503	
+Normalized - Acc (%): 31.534	 AUROC (%): 45.306	 OSCR (%): 19.667	
+==> Epoch 10/100
+LR: 0.0009786990392915203 - Batch 100/308	 Loss 15.033447 (16.983767)
+LR: 0.000977201432561235 - Batch 200/308	 Loss 15.145649 (16.705583)
+LR: 0.0009756541784565464 - Batch 300/308	 Loss 18.220757 (16.448570)
+Epoch 9 loss: 16.421623
+==> Test NirvanaOpenset
+Acc: 31.53409
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     7.639 46.371 51.529 58.533 37.857
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     5.730 41.039 50.839 55.417 34.699
+Acc (%): 31.534	 AUROC (%): 46.371	 OSCR (%): 18.682	
+Normalized - Acc (%): 31.534	 AUROC (%): 41.039	 OSCR (%): 17.570	
+==> Epoch 11/100
+LR: 0.0009739275658390483 - Batch 100/308	 Loss 13.444035 (15.956936)
+LR: 0.0009722775667646574 - Batch 200/308	 Loss 11.065275 (15.793251)
+LR: 0.0009705784325880237 - Batch 300/308	 Loss 17.134560 (15.703936)
+Epoch 10 loss: 15.708549
+==> Test NirvanaOpenset
+Acc: 26.89394
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     8.403 47.025 52.887 57.756 39.719
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    10.619 64.424 61.771 71.784 50.335
+Acc (%): 26.894	 AUROC (%): 47.025	 OSCR (%): 12.676	
+Normalized - Acc (%): 26.894	 AUROC (%): 64.424	 OSCR (%): 18.381	
+==> Epoch 12/100
+LR: 0.000968688383097061 - Batch 100/308	 Loss 14.242495 (15.606195)
+LR: 0.0009668876200284453 - Batch 200/308	 Loss 19.453852 (15.547434)
+LR: 0.0009650382826201599 - Batch 300/308	 Loss 14.281968 (15.612097)
+Epoch 11 loss: 15.599379
+==> Test NirvanaOpenset
+Acc: 26.89394
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    13.980 47.900 55.405 56.975 43.887
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    12.223 61.428 59.789 68.877 48.801
+Acc (%): 26.894	 AUROC (%): 47.900	 OSCR (%): 12.950	
+Normalized - Acc (%): 26.894	 AUROC (%): 61.428	 OSCR (%): 17.558	
+==> Epoch 13/100
+LR: 0.0009629866615063927 - Batch 100/308	 Loss 15.586339 (15.385957)
+LR: 0.0009610369115792909 - Batch 200/308	 Loss 15.065024 (15.453670)
+LR: 0.0009590391960121015 - Batch 300/308	 Loss 13.189152 (15.389166)
+Epoch 12 loss: 15.376642
+==> Test NirvanaOpenset
+Acc: 26.89394
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    10.008 44.550 53.364 54.989 39.761
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     7.716 44.845 52.072 58.163 37.772
+Acc (%): 26.894	 AUROC (%): 44.550	 OSCR (%): 12.793	
+Normalized - Acc (%): 26.894	 AUROC (%): 44.845	 OSCR (%): 13.993	
+==> Epoch 14/100
+LR: 0.0009568280279778737 - Batch 100/308	 Loss 11.514699 (14.884784)
+LR: 0.0009547312153600676 - Batch 200/308	 Loss 15.236593 (15.101951)
+LR: 0.0009525870931380532 - Batch 300/308	 Loss 15.093090 (15.228815)
+Epoch 13 loss: 15.220857
+==> Test NirvanaOpenset
+Acc: 36.64773
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    11.688 44.872 54.411 55.055 40.800
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    12.758 43.105 55.326 54.465 40.498
+Acc (%): 36.648	 AUROC (%): 44.872	 OSCR (%): 17.572	
+Normalized - Acc (%): 36.648	 AUROC (%): 43.105	 OSCR (%): 17.169	
+==> Epoch 15/100
+LR: 0.0009502185603392565 - Batch 100/308	 Loss 12.765984 (15.136592)
+LR: 0.0009479767543316496 - Batch 200/308	 Loss 14.154404 (15.182349)
+LR: 0.0009456883414445799 - Batch 300/308	 Loss 15.609466 (15.090904)
+Epoch 14 loss: 15.071717
+==> Test NirvanaOpenset
+Acc: 27.84091
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    10.390 48.035 53.077 58.061 42.646
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     7.410 44.024 52.007 57.388 37.939
+Acc (%): 27.841	 AUROC (%): 48.035	 OSCR (%): 13.080	
+Normalized - Acc (%): 27.841	 AUROC (%): 44.024	 OSCR (%): 12.618	
+==> Epoch 16/100
+LR: 0.0009431647813371308 - Batch 100/308	 Loss 15.829263 (14.943755)
+LR: 0.0009407801943315945 - Batch 200/308	 Loss 13.842900 (14.851800)
+LR: 0.0009383497491667056 - Batch 300/308	 Loss 15.849249 (15.269496)
+Epoch 15 loss: 15.304720
+==> Test NirvanaOpenset
+Acc: 29.59280
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     6.112 38.123 50.744 52.556 33.798
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     6.264 35.824 51.021 50.394 33.382
+Acc (%): 29.593	 AUROC (%): 38.123	 OSCR (%): 9.263	
+Normalized - Acc (%): 29.593	 AUROC (%): 35.824	 OSCR (%): 9.417	
+==> Epoch 17/100
+LR: 0.0009356736521997568 - Batch 100/308	 Loss 17.421085 (15.904663)
+LR: 0.0009331486374957731 - Batch 200/308	 Loss 16.457045 (15.972389)
+LR: 0.0009305785586090114 - Batch 300/308	 Loss 15.860676 (15.871125)
+Epoch 16 loss: 15.888232
+==> Test NirvanaOpenset
+Acc: 29.82955
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     5.348 48.460 50.644 60.147 37.963
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     7.257 53.550 54.024 63.437 42.175
+Acc (%): 29.830	 AUROC (%): 48.460	 OSCR (%): 11.917	
+Normalized - Acc (%): 29.830	 AUROC (%): 53.550	 OSCR (%): 14.272	
+==> Epoch 18/100
+LR: 0.0009277525657671805 - Batch 100/308	 Loss 16.713516 (15.456614)
+LR: 0.0009250896152494108 - Batch 200/308	 Loss 13.215650 (15.504698)
+LR: 0.0009223824389983478 - Batch 300/308	 Loss 14.825919 (15.524684)
+Epoch 17 loss: 15.498984
+==> Test NirvanaOpenset
+Acc: 30.30303
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     5.577 46.486 50.541 58.985 36.503
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     5.271 49.975 52.072 61.361 38.385
+Acc (%): 30.303	 AUROC (%): 46.486	 OSCR (%): 12.979	
+Normalized - Acc (%): 30.303	 AUROC (%): 49.975	 OSCR (%): 15.257	
+==> Epoch 19/100
+LR: 0.000919409339195383 - Batch 100/308	 Loss 13.489245 (14.642224)
+LR: 0.0009166110808744885 - Batch 200/308	 Loss 16.540546 (14.700534)
+LR: 0.0009137694789152431 - Batch 300/308	 Loss 13.953502 (15.390263)
+Epoch 18 loss: 15.399851
+==> Test NirvanaOpenset
+Acc: 31.72348
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     5.959 47.235 55.283 58.138 40.546
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     5.118 45.487 52.361 56.910 38.245
+Acc (%): 31.723	 AUROC (%): 47.235	 OSCR (%): 15.006	
+Normalized - Acc (%): 31.723	 AUROC (%): 45.487	 OSCR (%): 17.429	
+==> Epoch 20/100
+LR: 0.000910652206241703 - Batch 100/308	 Loss 18.181290 (16.751955)
+LR: 0.0009077214016608072 - Batch 200/308	 Loss 14.910524 (16.424061)
+LR: 0.0009047481783114427 - Batch 300/308	 Loss 17.753273 (16.237986)
+Epoch 19 loss: 16.216367
+==> Test NirvanaOpenset
+Acc: 30.58712
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    11.383 44.758 53.680 54.852 39.454
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    11.994 62.830 60.928 69.097 50.454
+Acc (%): 30.587	 AUROC (%): 44.758	 OSCR (%): 13.323	
+Normalized - Acc (%): 30.587	 AUROC (%): 62.830	 OSCR (%): 21.400	
+==> Epoch 21/100
+LR: 0.0009014898091391039 - Batch 100/308	 Loss 14.594641 (15.373859)
+LR: 0.000898429350648489 - Batch 200/308	 Loss 14.503294 (15.329980)
+LR: 0.0008953274401214899 - Batch 300/308	 Loss 14.393827 (15.322196)
+Epoch 20 loss: 15.321111
+==> Test NirvanaOpenset
+Acc: 29.73485
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     8.098 38.319 51.902 51.337 35.789
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     9.702 46.591 52.537 59.720 39.757
+Acc (%): 29.735	 AUROC (%): 38.319	 OSCR (%): 10.029	
+Normalized - Acc (%): 29.735	 AUROC (%): 46.591	 OSCR (%): 14.792	
+==> Epoch 22/100
+LR: 0.0008919311900673378 - Batch 100/308	 Loss 14.807599 (14.989919)
+LR: 0.0008887440979700402 - Batch 200/308	 Loss 13.462424 (14.998931)
+LR: 0.0008855165614765976 - Batch 300/308	 Loss 16.693916 (15.015936)
+Epoch 21 loss: 14.991924
+==> Test NirvanaOpenset
+Acc: 32.43371
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     6.570 37.853 50.972 51.513 34.815
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     6.035 38.173 50.726 52.722 34.307
+Acc (%): 32.434	 AUROC (%): 37.853	 OSCR (%): 15.419	
+Normalized - Acc (%): 32.434	 AUROC (%): 38.173	 OSCR (%): 16.615	
+==> Epoch 23/100
+LR: 0.0008819857822294009 - Batch 100/308	 Loss 17.111835 (15.651900)
+LR: 0.000878675201800538 - Batch 200/308	 Loss 17.410898 (16.366206)
+LR: 0.0008753252245295065 - Batch 300/308	 Loss 15.185756 (16.358326)
+Epoch 22 loss: 16.318907
+==> Test NirvanaOpenset
+Acc: 25.42614
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    22.689 55.155 63.063 59.449 54.054
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    21.696 41.665 59.314 52.052 47.384
+Acc (%): 25.426	 AUROC (%): 55.155	 OSCR (%): 13.968	
+Normalized - Acc (%): 25.426	 AUROC (%): 41.665	 OSCR (%): 10.594	
+==> Epoch 24/100
+LR: 0.0008716634005421057 - Batch 100/308	 Loss 16.279655 (15.961107)
+LR: 0.0008682325989248695 - Batch 200/308	 Loss 14.531068 (15.818379)
+LR: 0.0008647634868993681 - Batch 300/308	 Loss 15.571190 (15.652285)
+Epoch 23 loss: 15.653010
+==> Test NirvanaOpenset
+Acc: 26.23106
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    22.842 48.389 59.562 55.654 49.894
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    22.995 42.026 59.505 52.194 48.084
+Acc (%): 26.231	 AUROC (%): 48.389	 OSCR (%): 13.530	
+Normalized - Acc (%): 26.231	 AUROC (%): 42.026	 OSCR (%): 11.446	
+==> Epoch 25/100
+LR: 0.0008609742319499424 - Batch 100/308	 Loss 15.210608 (15.202145)
+LR: 0.0008574265949313245 - Batch 200/308	 Loss 12.907823 (15.342680)
+LR: 0.0008538417717460898 - Batch 300/308	 Loss 13.438357 (15.207873)
+Epoch 24 loss: 15.209504
+==> Test NirvanaOpenset
+Acc: 21.21212
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    23.300 50.849 59.746 57.669 51.472
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    21.543 45.435 58.825 54.569 48.073
+Acc (%): 21.212	 AUROC (%): 50.849	 OSCR (%): 11.154	
+Normalized - Acc (%): 21.212	 AUROC (%): 45.435	 OSCR (%): 9.528	
+==> Epoch 26/100
+LR: 0.0008499288253717908 - Batch 100/308	 Loss 16.359802 (14.911104)
+LR: 0.0008462678540412163 - Batch 200/308	 Loss 14.282805 (15.166370)
+LR: 0.0008425708574839323 - Batch 300/308	 Loss 15.628051 (14.998428)
+Epoch 25 loss: 15.030655
+==> Test NirvanaOpenset
+Acc: 25.28409
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    22.918 43.563 59.729 53.147 48.372
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    23.453 42.009 59.862 52.158 48.745
+Acc (%): 25.284	 AUROC (%): 43.563	 OSCR (%): 10.871	
+Normalized - Acc (%): 25.284	 AUROC (%): 42.009	 OSCR (%): 10.630	
+==> Epoch 27/100
+LR: 0.0008385380812904171 - Batch 100/308	 Loss 14.416943 (14.649791)
+LR: 0.0008347673885845941 - Batch 200/308	 Loss 19.232677 (14.739241)
+LR: 0.0008309618671445192 - Batch 300/308	 Loss 15.154348 (14.634654)
+Epoch 26 loss: 14.614283
+==> Test NirvanaOpenset
+Acc: 24.24242
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    22.231 45.614 59.446 54.622 47.431
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    23.529 43.692 60.135 53.134 49.296
+Acc (%): 24.242	 AUROC (%): 45.614	 OSCR (%): 10.512	
+Normalized - Acc (%): 24.242	 AUROC (%): 43.692	 OSCR (%): 10.366	
+==> Epoch 28/100
+LR: 0.0008268132409950071 - Batch 100/308	 Loss 13.734565 (14.486648)
+LR: 0.0008229365481323952 - Batch 200/308	 Loss 12.921803 (14.371701)
+LR: 0.0008190262573997446 - Batch 300/308	 Loss 13.123750 (14.303654)
+Epoch 27 loss: 14.332849
+==> Test NirvanaOpenset
+Acc: 24.00568
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    23.147 42.498 59.695 52.433 48.606
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    23.606 41.980 59.764 52.191 48.059
+Acc (%): 24.006	 AUROC (%): 42.498	 OSCR (%): 10.459	
+Normalized - Acc (%): 24.006	 AUROC (%): 41.980	 OSCR (%): 10.354	
+==> Epoch 29/100
+LR: 0.0008147658754873744 - Batch 100/308	 Loss 10.805964 (14.971433)
+LR: 0.0008107870082957911 - Batch 200/308	 Loss 12.944764 (14.937392)
+LR: 0.0008067758072554223 - Batch 300/308	 Loss 15.305404 (14.964768)
+Epoch 28 loss: 14.978025
+==> Test NirvanaOpenset
+Acc: 32.24432
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    32.238 58.589 65.225 61.860 60.711
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    49.656 79.159 77.171 77.916 75.836
+Acc (%): 32.244	 AUROC (%): 58.589	 OSCR (%): 17.508	
+Normalized - Acc (%): 32.244	 AUROC (%): 79.159	 OSCR (%): 25.420	
+Normalized - Best Acc (%): 32.244	 AUROC (%): 79.159	 OSCR (%): 25.420	
+==> Epoch 30/100
+LR: 0.0008024078740627816 - Batch 100/308	 Loss 16.905127 (14.495354)
+LR: 0.0007983307592037705 - Batch 200/308	 Loss 13.242293 (14.447083)
+LR: 0.0007942226064268325 - Batch 300/308	 Loss 11.810081 (14.519363)
+Epoch 29 loss: 14.536197
+==> Test NirvanaOpenset
+Acc: 32.38636
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    24.217 61.941 65.735 63.786 60.179
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    27.120 76.953 74.023 82.077 67.544
+Acc (%): 32.386	 AUROC (%): 61.941	 OSCR (%): 20.251	
+Normalized - Acc (%): 32.386	 AUROC (%): 76.953	 OSCR (%): 27.155	
+==> Epoch 31/100
+LR: 0.0007897514325766338 - Batch 100/308	 Loss 13.729463 (14.356244)
+LR: 0.0007855800936703245 - Batch 200/308	 Loss 16.682375 (14.509324)
+LR: 0.0007813790434076248 - Batch 300/308	 Loss 15.509333 (14.494478)
+Epoch 30 loss: 14.520491
+==> Test NirvanaOpenset
+Acc: 32.19697
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    23.377 47.440 59.873 55.171 50.704
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    23.682 57.306 59.922 62.289 55.090
+Acc (%): 32.197	 AUROC (%): 47.440	 OSCR (%): 14.069	
+Normalized - Acc (%): 32.197	 AUROC (%): 57.306	 OSCR (%): 17.368	
+==> Epoch 32/100
+LR: 0.0007768090414086476 - Batch 100/308	 Loss 14.312253 (13.999398)
+LR: 0.0007725475950629282 - Batch 200/308	 Loss 15.347093 (14.231068)
+LR: 0.0007682577932438766 - Batch 300/308	 Loss 14.026132 (14.273081)
+Epoch 31 loss: 14.257538
+==> Test NirvanaOpenset
+Acc: 32.14962
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    24.141 44.754 60.010 53.658 50.266
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    23.759 45.792 59.917 54.409 50.636
+Acc (%): 32.150	 AUROC (%): 44.754	 OSCR (%): 13.331	
+Normalized - Acc (%): 32.150	 AUROC (%): 45.792	 OSCR (%): 13.769	
+==> Epoch 33/100
+LR: 0.0007635934731363514 - Batch 100/308	 Loss 17.316864 (13.990941)
+LR: 0.0007592461248842748 - Batch 200/308	 Loss 12.433852 (14.100820)
+LR: 0.0007548718050253528 - Batch 300/308	 Loss 13.441311 (14.102503)
+Epoch 32 loss: 14.105119
+==> Test NirvanaOpenset
+Acc: 32.24432
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    24.141 46.547 60.170 54.770 50.869
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    20.550 43.808 59.713 53.489 45.415
+Acc (%): 32.244	 AUROC (%): 46.547	 OSCR (%): 13.750	
+Normalized - Acc (%): 32.244	 AUROC (%): 43.808	 OSCR (%): 13.168	
+==> Epoch 34/100
+LR: 0.0007501177699300945 - Batch 100/308	 Loss 11.139176 (13.944703)
+LR: 0.0007456888100795246 - Batch 200/308	 Loss 13.017949 (13.911688)
+LR: 0.0007412342891063156 - Batch 300/308	 Loss 15.414628 (13.907951)
+Epoch 33 loss: 13.927842
+==> Test NirvanaOpenset
+Acc: 20.59659
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    23.988 44.605 59.996 53.551 50.367
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     1.681 27.063 50.076 47.728 27.070
+Acc (%): 20.597	 AUROC (%): 44.605	 OSCR (%): 9.011	
+Normalized - Acc (%): 20.597	 AUROC (%): 27.063	 OSCR (%): 5.112	
+==> Epoch 35/100
+LR: 0.0007363952306820014 - Batch 100/308	 Loss 12.378182 (13.843900)
+LR: 0.0007318890300815952 - Batch 200/308	 Loss 12.225628 (13.750875)
+LR: 0.0007273587040684988 - Batch 300/308	 Loss 18.402727 (13.700302)
+Epoch 34 loss: 13.704625
+==> Test NirvanaOpenset
+Acc: 16.38258
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    24.217 45.514 59.938 54.160 50.664
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     1.070 26.840 50.024 48.169 26.640
+Acc (%): 16.383	 AUROC (%): 45.514	 OSCR (%): 7.138	
+Normalized - Acc (%): 16.383	 AUROC (%): 26.840	 OSCR (%): 3.683	
+==> Epoch 36/100
+LR: 0.0007224393978815677 - Batch 100/308	 Loss 13.119514 (13.564827)
+LR: 0.0007178604036072776 - Batch 200/308	 Loss 13.960372 (13.750843)
+LR: 0.0007132587434391155 - Batch 300/308	 Loss 11.845476 (13.745377)
+Epoch 35 loss: 13.707672
+==> Test NirvanaOpenset
+Acc: 16.14583
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    24.293 43.984 60.204 53.178 50.377
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     0.993 24.760 50.000 46.921 26.148
+Acc (%): 16.146	 AUROC (%): 43.984	 OSCR (%): 6.862	
+Normalized - Acc (%): 16.146	 AUROC (%): 24.760	 OSCR (%): 3.548	
+==> Epoch 37/100
+LR: 0.0007082640442508584 - Batch 100/308	 Loss 10.871527 (13.783893)
+LR: 0.0007036167752172048 - Batch 200/308	 Loss 11.841492 (13.606850)
+LR: 0.0006989483221769981 - Batch 300/308	 Loss 10.328054 (13.526819)
+Epoch 36 loss: 13.517095
+==> Test NirvanaOpenset
+Acc: 21.07008
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    24.217 45.924 60.009 54.653 50.377
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     2.597 33.276 50.024 50.627 29.618
+Acc (%): 21.070	 AUROC (%): 45.924	 OSCR (%): 9.014	
+Normalized - Acc (%): 21.070	 AUROC (%): 33.276	 OSCR (%): 6.120	
+==> Epoch 38/100
+LR: 0.0006938831591524969 - Batch 100/308	 Loss 8.748263 (13.715471)
+LR: 0.0006891722016529432 - Batch 200/308	 Loss 11.410881 (13.483991)
+LR: 0.0006844415629402137 - Batch 300/308	 Loss 13.784575 (13.438692)
+Epoch 37 loss: 13.441479
+==> Test NirvanaOpenset
+Acc: 19.64962
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    23.911 45.000 60.010 53.874 50.210
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     2.674 34.649 50.049 50.306 30.875
+Acc (%): 19.650	 AUROC (%): 45.000	 OSCR (%): 8.211	
+Normalized - Acc (%): 19.650	 AUROC (%): 34.649	 OSCR (%): 6.002	
+==> Epoch 39/100
+LR: 0.0006793109347838492 - Batch 100/308	 Loss 9.814942 (13.487355)
+LR: 0.0006745409379646876 - Batch 200/308	 Loss 11.782521 (13.477458)
+LR: 0.000669752782148707 - Batch 300/308	 Loss 11.747287 (13.436339)
+Epoch 38 loss: 13.408755
+==> Test NirvanaOpenset
+Acc: 17.89773
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    24.064 44.605 59.969 53.625 50.023
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     1.451 28.652 50.000 48.423 27.409
+Acc (%): 17.898	 AUROC (%): 44.605	 OSCR (%): 7.344	
+Normalized - Acc (%): 17.898	 AUROC (%): 28.652	 OSCR (%): 3.973	
+==> Epoch 40/100
+LR: 0.0006645617521710402 - Batch 100/308	 Loss 11.659776 (13.260480)
+LR: 0.000659737423443243 - Batch 200/308	 Loss 13.396970 (13.231354)
+LR: 0.0006548964758557209 - Batch 300/308	 Loss 16.568546 (13.313301)
+Epoch 39 loss: 13.350652
+==> Test NirvanaOpenset
+Acc: 19.03409
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    23.682 43.748 59.842 52.995 50.003
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     5.271 36.335 50.648 50.454 33.719
+Acc (%): 19.034	 AUROC (%): 43.748	 OSCR (%): 7.889	
+Normalized - Acc (%): 19.034	 AUROC (%): 36.335	 OSCR (%): 6.116	
+==> Epoch 41/100
+LR: 0.0006496501669766206 - Batch 100/308	 Loss 12.117146 (13.060625)
+LR: 0.0006447762673701927 - Batch 200/308	 Loss 14.015476 (13.255718)
+LR: 0.0006398873054419439 - Batch 300/308	 Loss 12.709190 (13.300684)
+Epoch 40 loss: 13.296308
+==> Test NirvanaOpenset
+Acc: 20.78598
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    23.682 45.587 60.113 54.111 50.577
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    23.988 43.165 60.232 52.966 49.315
+Acc (%): 20.786	 AUROC (%): 45.587	 OSCR (%): 8.917	
+Normalized - Acc (%): 20.786	 AUROC (%): 43.165	 OSCR (%): 8.338	
+==> Epoch 42/100
+LR: 0.0006345908951348786 - Batch 100/308	 Loss 12.452476 (13.188187)
+LR: 0.0006296722346002996 - Batch 200/308	 Loss 14.122218 (13.308460)
+LR: 0.0006247400831464956 - Batch 300/308	 Loss 15.130329 (13.268189)
+Epoch 41 loss: 13.269048
+==> Test NirvanaOpenset
+Acc: 20.26515
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    23.682 47.477 59.934 55.522 51.147
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     3.896 35.319 50.121 50.913 31.512
+Acc (%): 20.265	 AUROC (%): 47.477	 OSCR (%): 8.756	
+Normalized - Acc (%): 20.265	 AUROC (%): 35.319	 OSCR (%): 6.426	
+==> Epoch 43/100
+LR: 0.0006193987983289951 - Batch 100/308	 Loss 18.668592 (15.683302)
+LR: 0.0006144402309903745 - Batch 200/308	 Loss 14.318197 (15.794837)
+LR: 0.0006094697574490339 - Batch 300/308	 Loss 11.713140 (15.531269)
+Epoch 42 loss: 15.509409
+==> Test NirvanaOpenset
+Acc: 32.05492
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    24.370 54.223 59.911 59.361 53.809
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    50.267 81.493 77.256 82.143 76.014
+Acc (%): 32.055	 AUROC (%): 54.223	 OSCR (%): 15.904	
+Normalized - Acc (%): 32.055	 AUROC (%): 81.493	 OSCR (%): 26.535	
+Normalized - Best Acc (%): 32.055	 AUROC (%): 81.493	 OSCR (%): 26.535	
+==> Epoch 44/100
+LR: 0.0006040888693243513 - Batch 100/308	 Loss 14.668658 (14.699347)
+LR: 0.0005990952886889983 - Batch 200/308	 Loss 14.926929 (14.688724)
+LR: 0.0005940913983174137 - Batch 300/308	 Loss 15.154405 (14.757665)
+Epoch 43 loss: 14.753607
+==> Test NirvanaOpenset
+Acc: 32.10227
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    24.141 50.902 60.145 57.334 52.207
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    30.558 74.972 74.323 75.706 68.761
+Acc (%): 32.102	 AUROC (%): 50.902	 OSCR (%): 14.828	
+Normalized - Acc (%): 32.102	 AUROC (%): 74.972	 OSCR (%): 23.802	
+==> Epoch 45/100
+LR: 0.0005886762171724867 - Batch 100/308	 Loss 13.043741 (14.507955)
+LR: 0.0005836525513016052 - Batch 200/308	 Loss 14.219336 (14.333704)
+LR: 0.0005786201823354467 - Batch 300/308	 Loss 16.033941 (14.313643)
+Epoch 44 loss: 14.325406
+==> Test NirvanaOpenset
+Acc: 32.10227
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    23.606 48.672 59.793 55.777 51.282
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    22.460 57.584 59.550 64.287 53.197
+Acc (%): 32.102	 AUROC (%): 48.672	 OSCR (%): 14.415	
+Normalized - Acc (%): 32.102	 AUROC (%): 57.584	 OSCR (%): 16.768	
+==> Epoch 46/100
+LR: 0.0005731760523002818 - Batch 100/308	 Loss 15.007533 (14.212596)
+LR: 0.0005681272589455733 - Batch 200/308	 Loss 13.032081 (14.075639)
+LR: 0.0005630713777254446 - Batch 300/308	 Loss 15.885006 (14.043694)
+Epoch 45 loss: 14.020983
+==> Test NirvanaOpenset
+Acc: 32.00758
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    23.606 46.434 59.977 54.622 50.569
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    23.224 47.873 59.255 56.272 49.834
+Acc (%): 32.008	 AUROC (%): 46.434	 OSCR (%): 13.609	
+Normalized - Acc (%): 32.008	 AUROC (%): 47.873	 OSCR (%): 13.933	
+==> Epoch 47/100
+LR: 0.0005576036714991082 - Batch 100/308	 Loss 10.319270 (13.833906)
+LR: 0.0005525347332100639 - Batch 200/308	 Loss 10.061491 (13.795786)
+LR: 0.0005474603292803267 - Batch 300/308	 Loss 15.936746 (13.758756)
+Epoch 46 loss: 13.771558
+==> Test NirvanaOpenset
+Acc: 20.64394
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    23.453 44.791 59.603 54.074 49.650
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     0.993 30.055 50.005 49.299 27.716
+Acc (%): 20.644	 AUROC (%): 44.791	 OSCR (%): 8.843	
+Normalized - Acc (%): 20.644	 AUROC (%): 30.055	 OSCR (%): 6.192	
+==> Epoch 48/100
+LR: 0.000541974442828741 - Batch 100/308	 Loss 13.562996 (13.785382)
+LR: 0.0005368903620354733 - Batch 200/308	 Loss 14.070130 (13.638195)
+LR: 0.0005318024432201643 - Batch 300/308	 Loss 12.590411 (13.649819)
+Epoch 47 loss: 13.626309
+==> Test NirvanaOpenset
+Acc: 19.55492
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    23.529 44.736 59.475 54.193 50.195
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     1.986 38.479 50.000 52.625 32.812
+Acc (%): 19.555	 AUROC (%): 44.736	 OSCR (%): 8.381	
+Normalized - Acc (%): 19.555	 AUROC (%): 38.479	 OSCR (%): 7.077	
+==> Epoch 49/100
+LR: 0.0005263037904509377 - Batch 100/308	 Loss 14.352088 (13.380471)
+LR: 0.0005212095845273795 - Batch 200/308	 Loss 13.922556 (13.476345)
+LR: 0.0005161131719880989 - Batch 300/308	 Loss 10.457373 (13.468327)
+Epoch 48 loss: 13.464293
+==> Test NirvanaOpenset
+Acc: 13.68371
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    23.835 44.017 59.673 53.633 50.047
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    23.071 43.417 59.355 53.548 48.598
+Acc (%): 13.684	 AUROC (%): 44.017	 OSCR (%): 5.705	
+Normalized - Acc (%): 13.684	 AUROC (%): 43.417	 OSCR (%): 5.369	
+==> Epoch 50/100
+LR: 0.0005106071794076542 - Batch 100/308	 Loss 14.419724 (13.645115)
+LR: 0.0005055078757200222 - Batch 200/308	 Loss 14.000454 (13.465530)
+LR: 0.0005004079990006486 - Batch 300/308	 Loss 15.723626 (13.413580)
+Epoch 49 loss: 13.409456
+==> Test NirvanaOpenset
+Acc: 13.73106
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    24.523 44.134 59.799 53.675 50.276
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    21.314 43.676 58.913 53.661 47.709
+Acc (%): 13.731	 AUROC (%): 44.134	 OSCR (%): 5.648	
+Normalized - Acc (%): 13.731	 AUROC (%): 43.676	 OSCR (%): 5.411	
+==> Epoch 51/100
+LR: 0.0004949001003589153 - Batch 100/308	 Loss 13.287558 (13.292211)
+LR: 0.0004898007313043027 - Batch 200/308	 Loss 14.693083 (13.468770)
+LR: 0.00048470242336744234 - Batch 300/308	 Loss 12.475610 (13.342136)
+Epoch 50 loss: 13.345622
+==> Test NirvanaOpenset
+Acc: 14.67803
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    24.141 44.633 59.850 53.988 50.439
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    14.668 43.375 57.628 53.783 42.980
+Acc (%): 14.678	 AUROC (%): 44.633	 OSCR (%): 6.143	
+Normalized - Acc (%): 14.678	 AUROC (%): 43.375	 OSCR (%): 5.730	
+==> Epoch 52/100
+LR: 0.00047919805429540445 - Batch 100/308	 Loss 19.145109 (13.296975)
+LR: 0.00047410365233541303 - Batch 200/308	 Loss 15.987238 (13.422132)
+LR: 0.0004690119445954735 - Batch 300/308	 Loss 11.973310 (13.305848)
+Epoch 51 loss: 13.243982
+==> Test NirvanaOpenset
+Acc: 13.16288
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    23.911 44.439 59.686 53.879 50.241
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    14.439 42.949 57.058 53.367 43.174
+Acc (%): 13.163	 AUROC (%): 44.439	 OSCR (%): 5.418	
+Normalized - Acc (%): 13.163	 AUROC (%): 42.949	 OSCR (%): 4.954	
+==> Epoch 53/100
+LR: 0.0004635165372408543 - Batch 100/308	 Loss 14.109025 (12.948509)
+LR: 0.0004584321299351647 - Batch 200/308	 Loss 13.556595 (13.166454)
+LR: 0.00045335204729295587 - Batch 300/308	 Loss 12.868941 (13.216929)
+Epoch 52 loss: 13.189897
+==> Test NirvanaOpenset
+Acc: 12.83144
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    24.141 44.619 60.028 53.919 50.385
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    18.717 42.877 58.367 53.181 44.150
+Acc (%): 12.831	 AUROC (%): 44.619	 OSCR (%): 5.203	
+Normalized - Acc (%): 12.831	 AUROC (%): 42.877	 OSCR (%): 4.832	
+==> Epoch 54/100
+LR: 0.00044787102495934565 - Batch 100/308	 Loss 11.243455 (13.338316)
+LR: 0.0004428016300041204 - Batch 200/308	 Loss 11.932683 (13.114926)
+LR: 0.00043773818588788453 - Batch 300/308	 Loss 13.299009 (13.220590)
+Epoch 53 loss: 13.192314
+==> Test NirvanaOpenset
+Acc: 12.59470
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    24.599 44.766 59.986 54.032 50.357
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    17.265 42.335 58.550 52.819 44.924
+Acc (%): 12.595	 AUROC (%): 44.766	 OSCR (%): 5.100	
+Normalized - Acc (%): 12.595	 AUROC (%): 42.335	 OSCR (%): 4.751	
+==> Epoch 55/100
+LR: 0.0004322769576825946 - Batch 100/308	 Loss 10.524950 (13.274293)
+LR: 0.0004272275779586192 - Batch 200/308	 Loss 13.215713 (13.152866)
+LR: 0.00042218576937638183 - Batch 300/308	 Loss 19.222647 (13.109998)
+Epoch 54 loss: 13.126822
+==> Test NirvanaOpenset
+Acc: 12.07386
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    23.988 43.238 59.786 52.950 50.030
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    22.307 42.678 59.289 52.670 47.640
+Acc (%): 12.074	 AUROC (%): 43.238	 OSCR (%): 4.606	
+Normalized - Acc (%): 12.074	 AUROC (%): 42.678	 OSCR (%): 4.490	
+==> Epoch 56/100
+LR: 0.000416749724872309 - Batch 100/308	 Loss 12.555872 (12.998090)
+LR: 0.0004117253435077523 - Batch 200/308	 Loss 8.591477 (12.890692)
+LR: 0.0004067101461158794 - Batch 300/308	 Loss 13.266248 (13.050045)
+Epoch 55 loss: 13.059726
+==> Test NirvanaOpenset
+Acc: 12.54735
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    24.523 45.018 59.997 54.178 50.531
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    22.383 42.879 59.171 52.958 47.835
+Acc (%): 12.547	 AUROC (%): 45.018	 OSCR (%): 5.056	
+Normalized - Acc (%): 12.547	 AUROC (%): 42.879	 OSCR (%): 4.792	
+==> Epoch 57/100
+LR: 0.0004013046500326471 - Batch 100/308	 Loss 12.086271 (13.029264)
+LR: 0.00039631022548531475 - Batch 200/308	 Loss 11.458699 (13.065931)
+LR: 0.00039132658867813944 - Batch 300/308	 Loss 11.584613 (13.027372)
+Epoch 56 loss: 13.032500
+==> Test NirvanaOpenset
+Acc: 12.50000
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    23.759 43.786 59.999 53.297 50.200
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    20.703 42.228 58.626 52.653 45.832
+Acc (%): 12.500	 AUROC (%): 43.786	 OSCR (%): 4.941	
+Normalized - Acc (%): 12.500	 AUROC (%): 42.228	 OSCR (%): 4.570	
+==> Epoch 58/100
+LR: 0.0003859569755877686 - Batch 100/308	 Loss 15.529613 (12.622828)
+LR: 0.00038099743675170424 - Batch 200/308	 Loss 11.673824 (12.989993)
+LR: 0.00037605027877707435 - Batch 300/308	 Loss 12.561989 (13.020430)
+Epoch 57 loss: 13.020137
+==> Test NirvanaOpenset
+Acc: 12.73674
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    24.064 43.745 59.787 53.261 50.205
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    15.126 41.452 56.718 52.426 42.271
+Acc (%): 12.737	 AUROC (%): 43.745	 OSCR (%): 5.057	
+Normalized - Acc (%): 12.737	 AUROC (%): 41.452	 OSCR (%): 4.475	
+==> Epoch 59/100
+LR: 0.0003707218478394041 - Batch 100/308	 Loss 12.000161 (12.980620)
+LR: 0.0003658020891806673 - Batch 200/308	 Loss 17.339516 (13.135774)
+LR: 0.0003608962922862254 - Batch 300/308	 Loss 15.329315 (12.993568)
+Epoch 58 loss: 13.005024
+==> Test NirvanaOpenset
+Acc: 12.12121
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    23.988 43.622 59.829 53.187 50.088
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    20.474 42.232 58.423 52.579 44.950
+Acc (%): 12.121	 AUROC (%): 43.622	 OSCR (%): 4.654	
+Normalized - Acc (%): 12.121	 AUROC (%): 42.232	 OSCR (%): 4.369	
+==> Epoch 60/100
+LR: 0.0003556143020192817 - Batch 100/308	 Loss 15.010119 (13.050254)
+LR: 0.00035073917874569807 - Batch 200/308	 Loss 12.359509 (13.097973)
+LR: 0.0003458795843606952 - Batch 300/308	 Loss 13.937907 (13.040914)
+Epoch 59 loss: 13.035892
+==> Test NirvanaOpenset
+Acc: 12.92614
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    24.217 45.394 59.808 54.413 50.521
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     4.202 41.172 56.495 52.417 38.235
+Acc (%): 12.926	 AUROC (%): 45.394	 OSCR (%): 5.193	
+Normalized - Acc (%): 12.926	 AUROC (%): 41.172	 OSCR (%): 4.381	
+==> Epoch 61/100
+LR: 0.0003406492474511696 - Batch 100/308	 Loss 18.817122 (13.166402)
+LR: 0.00033582357072082944 - Batch 200/308	 Loss 13.925894 (13.042580)
+LR: 0.00033101497467821734 - Batch 300/308	 Loss 13.898412 (12.941679)
+Epoch 60 loss: 12.953465
+==> Test NirvanaOpenset
+Acc: 13.54167
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    24.523 43.982 59.936 53.457 50.137
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     6.799 41.101 57.068 52.350 38.833
+Acc (%): 13.542	 AUROC (%): 43.982	 OSCR (%): 5.423	
+Normalized - Acc (%): 13.542	 AUROC (%): 41.101	 OSCR (%): 4.404	
+==> Epoch 62/100
+LR: 0.0003258414528371724 - Batch 100/308	 Loss 13.606108 (12.944413)
+LR: 0.0003210699850103986 - Batch 200/308	 Loss 9.796058 (13.046746)
+LR: 0.0003163171328139231 - Batch 300/308	 Loss 14.427063 (12.934675)
+Epoch 61 loss: 12.923956
+==> Test NirvanaOpenset
+Acc: 13.02083
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    24.446 43.741 60.008 53.254 50.202
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     0.993 40.136 56.411 51.948 36.539
+Acc (%): 13.021	 AUROC (%): 43.741	 OSCR (%): 5.100	
+Normalized - Acc (%): 13.021	 AUROC (%): 40.136	 OSCR (%): 4.116	
+==> Epoch 63/100
+LR: 0.00031120553168280987 - Batch 100/308	 Loss 14.662581 (12.850389)
+LR: 0.0003064929816222801 - Batch 200/308	 Loss 11.158712 (12.913723)
+LR: 0.0003018005637632398 - Batch 300/308	 Loss 13.207392 (12.908024)
+Epoch 62 loss: 12.921773
+==> Test NirvanaOpenset
+Acc: 16.66667
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    24.370 44.881 60.070 54.098 50.438
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     1.681 37.667 52.502 51.456 32.510
+Acc (%): 16.667	 AUROC (%): 44.881	 OSCR (%): 6.846	
+Normalized - Acc (%): 16.667	 AUROC (%): 37.667	 OSCR (%): 4.094	
+==> Epoch 64/100
+LR: 0.0002967559278752436 - Batch 100/308	 Loss 10.609953 (12.900144)
+LR: 0.00029210694629891546 - Batch 200/308	 Loss 14.486128 (12.971152)
+LR: 0.0002874795936272155 - Batch 300/308	 Loss 13.676073 (12.904879)
+Epoch 63 loss: 12.933139
+==> Test NirvanaOpenset
+Acc: 17.28220
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    24.217 45.353 60.111 54.332 50.434
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     1.757 36.346 50.832 51.059 31.314
+Acc (%): 17.282	 AUROC (%): 45.353	 OSCR (%): 7.115	
+Normalized - Acc (%): 17.282	 AUROC (%): 36.346	 OSCR (%): 3.970	
+==> Epoch 65/100
+LR: 0.0002825069014289111 - Batch 100/308	 Loss 12.791323 (13.160036)
+LR: 0.00027792607632032154 - Batch 200/308	 Loss 10.805672 (12.875953)
+LR: 0.00027336835547438085 - Batch 300/308	 Loss 12.092149 (12.894956)
+Epoch 64 loss: 12.898074
+==> Test NirvanaOpenset
+Acc: 14.72538
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    24.064 44.365 60.143 53.675 50.233
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     0.764 38.767 52.972 51.673 33.665
+Acc (%): 14.725	 AUROC (%): 44.365	 OSCR (%): 5.904	
+Normalized - Acc (%): 14.725	 AUROC (%): 38.767	 OSCR (%): 3.887	
+==> Epoch 66/100
+LR: 0.00026847251441260747 - Batch 100/308	 Loss 13.019478 (13.053575)
+LR: 0.0002639643664930889 - Batch 200/308	 Loss 11.857962 (13.030373)
+LR: 0.00025948077539312273 - Batch 300/308	 Loss 13.942055 (13.009862)
+Epoch 65 loss: 12.968932
+==> Test NirvanaOpenset
+Acc: 18.70265
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    23.911 45.708 60.078 54.563 50.486
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     1.604 36.565 51.271 51.169 31.343
+Acc (%): 18.703	 AUROC (%): 45.708	 OSCR (%): 7.703	
+Normalized - Acc (%): 18.703	 AUROC (%): 36.565	 OSCR (%): 4.381	
+==> Epoch 67/100
+LR: 0.0002546666170719267 - Batch 100/308	 Loss 11.418553 (13.003214)
+LR: 0.00025023559533920086 - Batch 200/308	 Loss 15.130378 (12.864262)
+LR: 0.00024583055874831427 - Batch 300/308	 Loss 10.708921 (12.940637)
+Epoch 66 loss: 12.899899
+==> Test NirvanaOpenset
+Acc: 15.57765
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    23.835 44.575 60.080 53.815 50.126
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     1.146 36.991 51.441 51.170 31.775
+Acc (%): 15.578	 AUROC (%): 44.575	 OSCR (%): 6.350	
+Normalized - Acc (%): 15.578	 AUROC (%): 36.991	 OSCR (%): 3.938	
+==> Epoch 68/100
+LR: 0.00024110283416073835 - Batch 100/308	 Loss 11.518019 (12.701638)
+LR: 0.0002367533114982912 - Batch 200/308	 Loss 14.412202 (12.807326)
+LR: 0.00023243117665577257 - Batch 300/308	 Loss 10.752925 (12.888333)
+Epoch 67 loss: 12.901918
+==> Test NirvanaOpenset
+Acc: 15.00947
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    24.293 44.657 60.138 53.872 50.223
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     1.222 35.951 51.167 50.797 30.999
+Acc (%): 15.009	 AUROC (%): 44.657	 OSCR (%): 6.060	
+Normalized - Acc (%): 15.009	 AUROC (%): 35.951	 OSCR (%): 3.777	
+==> Epoch 69/100
+LR: 0.00022779455149519933 - Batch 100/308	 Loss 14.354389 (12.649696)
+LR: 0.0002235308203567745 - Batch 200/308	 Loss 12.882039 (12.805980)
+LR: 0.00021929585268789614 - Batch 300/308	 Loss 9.961799 (12.813611)
+Epoch 68 loss: 12.862735
+==> Test NirvanaOpenset
+Acc: 15.24621
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    25.057 44.855 60.134 54.086 50.221
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     1.375 35.650 51.196 50.799 30.728
+Acc (%): 15.246	 AUROC (%): 44.855	 OSCR (%): 6.186	
+Normalized - Acc (%): 15.246	 AUROC (%): 35.650	 OSCR (%): 3.771	
+==> Epoch 70/100
+LR: 0.00021475490274357233 - Batch 100/308	 Loss 16.264008 (13.025202)
+LR: 0.00021058117091703708 - Batch 200/308	 Loss 16.173941 (12.951252)
+LR: 0.00020643754982359409 - Batch 300/308	 Loss 14.134499 (12.857772)
+Epoch 69 loss: 12.858500
+==> Test NirvanaOpenset
+Acc: 16.47727
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    24.293 44.734 60.123 53.942 50.225
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     1.222 35.823 51.072 50.833 30.899
+Acc (%): 16.477	 AUROC (%): 44.734	 OSCR (%): 6.692	
+Normalized - Acc (%): 16.477	 AUROC (%): 35.823	 OSCR (%): 3.910	
+==> Epoch 71/100
+LR: 0.00020199675646487966 - Batch 100/308	 Loss 8.880938 (12.676783)
+LR: 0.00019791714291964615 - Batch 200/308	 Loss 9.706608 (12.911864)
+LR: 0.00019386895765539258 - Batch 300/308	 Loss 11.825331 (12.799676)
+Epoch 70 loss: 12.793020
+==> Test NirvanaOpenset
+Acc: 15.00947
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    24.141 44.871 60.042 54.024 50.241
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     0.840 36.778 51.164 51.211 31.577
+Acc (%): 15.009	 AUROC (%): 44.871	 OSCR (%): 6.080	
+Normalized - Acc (%): 15.009	 AUROC (%): 36.778	 OSCR (%): 3.827	
+==> Epoch 72/100
+LR: 0.00018953270340918858 - Batch 100/308	 Loss 14.035270 (12.851284)
+LR: 0.00018555123423128825 - Batch 200/308	 Loss 13.679125 (12.820040)
+LR: 0.000181602479866336 - Batch 300/308	 Loss 13.453450 (12.832315)
+Epoch 71 loss: 12.836439
+==> Test NirvanaOpenset
+Acc: 17.18750
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    23.988 45.428 60.094 54.425 50.352
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     1.070 36.107 51.111 51.007 31.110
+Acc (%): 17.188	 AUROC (%): 45.428	 OSCR (%): 7.076	
+Normalized - Acc (%): 17.188	 AUROC (%): 36.107	 OSCR (%): 4.057	
+==> Epoch 73/100
+LR: 0.00017737504409206167 - Batch 100/308	 Loss 13.947309 (12.880341)
+LR: 0.00017349564851088415 - Batch 200/308	 Loss 14.406445 (12.730675)
+LR: 0.0001696502219890531 - Batch 300/308	 Loss 14.344650 (12.785590)
+Epoch 72 loss: 12.822997
+==> Test NirvanaOpenset
+Acc: 14.48864
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    23.988 44.257 60.025 53.563 50.118
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     1.375 36.691 51.287 50.979 31.652
+Acc (%): 14.489	 AUROC (%): 44.257	 OSCR (%): 5.782	
+Normalized - Acc (%): 14.489	 AUROC (%): 36.691	 OSCR (%): 3.719	
+==> Epoch 74/100
+LR: 0.00016553577665543286 - Batch 100/308	 Loss 9.854160 (12.585175)
+LR: 0.0001617622831660519 - Batch 200/308	 Loss 9.154569 (12.748327)
+LR: 0.00015802397945905485 - Batch 300/308	 Loss 13.337184 (12.778016)
+Epoch 73 loss: 12.800182
+==> Test NirvanaOpenset
+Acc: 13.87311
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    24.370 44.809 60.036 53.998 50.292
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     0.840 36.778 51.254 51.103 31.588
+Acc (%): 13.873	 AUROC (%): 44.809	 OSCR (%): 5.575	
+Normalized - Acc (%): 13.873	 AUROC (%): 36.778	 OSCR (%): 3.773	
+==> Epoch 75/100
+LR: 0.00015402658502689006 - Batch 100/308	 Loss 14.775855 (12.962520)
+LR: 0.00015036271761180022 - Batch 200/308	 Loss 10.960840 (12.849037)
+LR: 0.00014673522597406533 - Batch 300/308	 Loss 8.412138 (12.805429)
+Epoch 74 loss: 12.772411
+==> Test NirvanaOpenset
+Acc: 15.90909
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    23.911 45.359 60.023 54.372 50.393
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     1.451 36.382 51.216 51.062 31.257
+Acc (%): 15.909	 AUROC (%): 45.359	 OSCR (%): 6.492	
+Normalized - Acc (%): 15.909	 AUROC (%): 36.382	 OSCR (%): 3.915	
+==> Epoch 76/100
+LR: 0.0001428588273890493 - Batch 100/308	 Loss 13.438569 (12.929309)
+LR: 0.00013930820184304514 - Batch 200/308	 Loss 14.995893 (12.703838)
+LR: 0.0001357951021708663 - Batch 300/308	 Loss 15.803468 (12.797385)
+Epoch 75 loss: 12.787881
+==> Test NirvanaOpenset
+Acc: 17.61364
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    24.217 45.083 60.071 54.242 50.194
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     1.833 35.928 51.183 50.931 31.001
+Acc (%): 17.614	 AUROC (%): 45.083	 OSCR (%): 7.170	
+Normalized - Acc (%): 17.614	 AUROC (%): 35.928	 OSCR (%): 3.993	
+==> Epoch 77/100
+LR: 0.00013204352497039892 - Batch 100/308	 Loss 11.041566 (12.694604)
+LR: 0.00012860964533222214 - Batch 200/308	 Loss 10.903884 (12.745008)
+LR: 0.0001252144046308345 - Batch 300/308	 Loss 12.112064 (12.739188)
+Epoch 76 loss: 12.749086
+==> Test NirvanaOpenset
+Acc: 13.96780
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    24.064 44.333 60.164 53.582 50.150
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     0.917 37.463 52.486 51.218 32.389
+Acc (%): 13.968	 AUROC (%): 44.333	 OSCR (%): 5.638	
+Normalized - Acc (%): 13.968	 AUROC (%): 37.463	 OSCR (%): 3.854	
+==> Epoch 78/100
+LR: 0.00012159135116867923 - Batch 100/308	 Loss 13.983705 (12.868010)
+LR: 0.00011827760626295555 - Batch 200/308	 Loss 8.893761 (12.900503)
+LR: 0.0001150035752250186 - Batch 300/308	 Loss 8.937285 (12.727897)
+Epoch 77 loss: 12.745962
+==> Test NirvanaOpenset
+Acc: 14.34659
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    23.988 44.978 60.047 54.077 50.291
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     1.299 36.075 50.901 50.872 31.043
+Acc (%): 14.347	 AUROC (%): 44.978	 OSCR (%): 5.813	
+Normalized - Acc (%): 14.347	 AUROC (%): 36.075	 OSCR (%): 3.688	
+==> Epoch 79/100
+LR: 0.00011151262101752641 - Batch 100/308	 Loss 12.074189 (12.682255)
+LR: 0.00010832228111040458 - Batch 200/308	 Loss 11.062324 (12.721954)
+LR: 0.00010517269080927422 - Batch 300/308	 Loss 12.935433 (12.740218)
+Epoch 78 loss: 12.747095
+==> Test NirvanaOpenset
+Acc: 15.95644
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    23.988 45.383 60.089 54.346 50.361
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     1.299 35.815 50.845 50.902 30.868
+Acc (%): 15.956	 AUROC (%): 45.383	 OSCR (%): 6.500	
+Normalized - Acc (%): 15.956	 AUROC (%): 35.815	 OSCR (%): 3.845	
+==> Epoch 80/100
+LR: 0.00010181728100677967 - Batch 100/308	 Loss 14.467196 (12.851900)
+LR: 9.875349457857338e-05 - Batch 200/308	 Loss 11.808166 (12.956045)
+LR: 9.573145327962219e-05 - Batch 300/308	 Loss 11.291067 (12.755659)
+Epoch 79 loss: 12.746835
+==> Test NirvanaOpenset
+Acc: 15.86174
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    23.988 44.699 60.089 53.816 50.222
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     1.222 36.283 51.000 50.898 31.253
+Acc (%): 15.862	 AUROC (%): 44.699	 OSCR (%): 6.425	
+Normalized - Acc (%): 15.862	 AUROC (%): 36.283	 OSCR (%): 3.734	
+==> Epoch 81/100
+LR: 9.251489926649673e-05 - Batch 100/308	 Loss 9.001621 (12.501503)
+LR: 8.958068990451553e-05 - Batch 200/308	 Loss 12.979376 (12.635560)
+LR: 8.668917999765014e-05 - Batch 300/308	 Loss 14.090219 (12.703995)
+Epoch 80 loss: 12.724221
+==> Test NirvanaOpenset
+Acc: 16.85606
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    23.759 44.197 60.013 53.557 49.903
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     1.757 36.633 51.664 51.000 31.540
+Acc (%): 16.856	 AUROC (%): 44.197	 OSCR (%): 6.737	
+Normalized - Acc (%): 16.856	 AUROC (%): 36.633	 OSCR (%): 3.639	
+==> Epoch 82/100
+LR: 8.361465612436551e-05 - Batch 100/308	 Loss 9.488414 (12.719245)
+LR: 8.081291953899788e-05 - Batch 200/308	 Loss 11.766177 (12.805964)
+LR: 7.805479459540034e-05 - Batch 300/308	 Loss 12.107796 (12.746705)
+Epoch 81 loss: 12.721829
+==> Test NirvanaOpenset
+Acc: 16.57197
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    23.911 44.440 59.973 53.719 49.919
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     1.375 36.219 51.659 50.867 31.257
+Acc (%): 16.572	 AUROC (%): 44.440	 OSCR (%): 6.611	
+Normalized - Acc (%): 16.572	 AUROC (%): 36.219	 OSCR (%): 3.697	
+==> Epoch 83/100
+LR: 7.512533504582772e-05 - Batch 100/308	 Loss 14.012352 (12.882023)
+LR: 7.2458836212826e-05 - Batch 200/308	 Loss 11.646698 (12.763400)
+LR: 6.983681816882304e-05 - Batch 300/308	 Loss 12.697437 (12.708768)
+Epoch 82 loss: 12.712614
+==> Test NirvanaOpenset
+Acc: 16.38258
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas    23.529 44.789 60.011 54.007 50.017
+       TNR    AUROC  DTACC  AUIN   AUOUT 
+Bas     1.451 36.265 51.573 50.990 31.244
+Acc (%): 16.383	 AUROC (%): 44.789	 OSCR (%): 6.649	
+Normalized - Acc (%): 16.383	 AUROC (%): 36.265	 OSCR (%): 3.803	
+==> Epoch 84/100
+LR: 6.705531396585997e-05 - Batch 100/308	 Loss 13.923484 (12.336143)
+
+

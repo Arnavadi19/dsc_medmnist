@@ -7,10 +7,8 @@ from features_extract import deep_features
 from extractor import ViTExtractor
 
 def train_Nirvana_oe(net, criterion, optimizer, scheduler, trainloader, trainloader_oe, epoch=None, **options):
-    if options['model'] == 'vit':
-        net.train()
-    else:
-        net.train()
+    
+    net.train()
         
     losses = AverageMeter()
     torch.cuda.empty_cache()
