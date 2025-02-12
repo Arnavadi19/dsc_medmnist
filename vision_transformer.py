@@ -153,6 +153,7 @@ class VisionTransformer(nn.Module):
                  drop_path_rate=0., norm_layer=nn.LayerNorm, **kwargs):
         super().__init__()
         self.num_features = self.embed_dim = embed_dim
+        self.grad_checkpointing = True
 
         self.patch_embed = PatchEmbed(
             img_size=img_size[0], patch_size=patch_size, in_chans=in_chans, embed_dim=embed_dim)
@@ -225,7 +226,10 @@ class VisionTransformer(nn.Module):
         x = self.prepare_tokens(x)
         features = []
         for blk in self.blocks:
-            x = blk(x)
+            if self.grad_checkpointing and self.training:
+                x = torch.utils.checkpoint.checkpoint(blk, x, use_reentrant=False)
+            else:
+                x = blk(x)
             if return_features:
                 features.append(self.norm(x))
         x = self.norm(x)

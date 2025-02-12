@@ -190,7 +190,8 @@ def main_worker(options):
         extractor = ViTExtractor(
         model_type='dino_vits8',  # ViT-S/8
         stride=4,
-        device=device
+        device=device,
+        head='teacher'
         )
         img_size = 224
         net = extractor.model

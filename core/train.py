@@ -5,6 +5,7 @@ from utils import AverageMeter
 import numpy as np
 from features_extract import deep_features
 from extractor import ViTExtractor
+from torch.amp import autocast, GradScaler
 
 def train_Nirvana_oe(net, criterion, optimizer, scheduler, trainloader, trainloader_oe, epoch=None, **options):
     

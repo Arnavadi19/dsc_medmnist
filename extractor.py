@@ -99,20 +99,23 @@ class ViTExtractor:
 
     #     return model
     @staticmethod
-    def create_model(model_type, model_dir=None, head="student", state_dict=None):
+    def create_model(model_type, model_dir=None, head="teacher", state_dict=None):
         if 'dino' in model_type:
             model = vits.dino_vits8()
             if state_dict is None:
-                url = "https://dl.fbaipublicfiles.com/dino/dino_deitsmall8_pretrain/dino_deitsmall8_pretrain.pth"
-                state_dict = torch.hub.load_state_dict_from_url(
-                    url=url,
-                    map_location='cpu'
-                )
-                
+                url = "https://dl.fbaipublicfiles.com/dino/dino_deitsmall8_pretrain/dino_deitsmall8_pretrain_full_checkpoint.pth"
+                checkpoint = torch.hub.load_state_dict_from_url(url, map_location='cpu')
+                state_dict = checkpoint['teacher']  # Using teacher network
+            
+            # Remove head-related keys
+                head_keys = [k for k in state_dict.keys() if k.startswith('head.')]
+                for k in head_keys:
+                    del state_dict[k]
+
             if state_dict is not None:
-                state_dict = {k.replace("module.", ""): v for k, v in state_dict.items()}
+                #state_dict = {k.replace("module.", ""): v for k, v in state_dict.items()}
                 state_dict = {k.replace("backbone.", ""): v for k, v in state_dict.items()}
-                msg = model.load_state_dict(state_dict, strict=False)
+                msg = model.load_state_dict(state_dict, strict=True)
                 print(f'Loading model with message: {msg}')
             
             return model
