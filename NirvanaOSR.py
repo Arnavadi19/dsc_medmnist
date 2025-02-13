@@ -23,6 +23,7 @@ from utils import Logger, save_networks, load_networks
 from core import test_ddfm_b9, train_Nirvana_oe
 from split import splits_2020 as splits
 from extractor import ViTExtractor
+from features_extract import deep_features
 
 from medmnist import BloodMNIST, OCTMNIST
 
@@ -33,7 +34,7 @@ parser = argparse.ArgumentParser("Training")
 
 
 # Dataset
-parser.add_argument('--dataset', type=str, default='bloodmnist', choices=['bloodmnist', 'bloodmnist224', 'octmnist'], help="Dataset selection")
+parser.add_argument('--dataset', type=str, default='bloodmnist', choices=['bloodmnist', 'octmnist'], help="Dataset selection")
 parser.add_argument('--dataroot', type=str, default='./data')
 parser.add_argument('--outf', type=str, default='./logs_results', help='Directory to save results')
 # Optimization
@@ -190,10 +191,9 @@ def main_worker(options):
         extractor = ViTExtractor(
         model_type='dino_vits8',  # ViT-S/8
         stride=4,
-        device=device,
-        head='teacher'
+        device='cuda' if torch.cuda.is_available() else 'cpu'
+        #head='teacher'
         )
-        img_size = 224
         net = extractor.model
         feat_dim = 384  # ViT-S feature dimension
     else:

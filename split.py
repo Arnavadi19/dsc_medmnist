@@ -4,7 +4,7 @@ splits_2020 = {
         {'known': [0, 2, 5, 7], 'unknown': [1, 3, 4, 6]},
         {'known': [0, 6, 7, 4], 'unknown': [1, 3, 2, 5]},
         {'known': [2, 3, 6, 7], 'unknown': [0, 1, 4, 5]},
-        {'known': [4, 3, 5, 6], 'unknown': [0, 1, 2, 7]},#
+        {'known': [0, 3, 5, 6], 'unknown': [2, 4, 1, 7]},#
         {'known': [0, 2, 4, 6], 'unknown': [1, 3, 5, 7]}
     ],
     'octmnist': [
