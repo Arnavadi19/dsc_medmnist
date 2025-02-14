@@ -45,7 +45,6 @@ class BloodMNIST_OSR(object):
     """Open Set Recognition wrapper for BloodMNIST dataset"""
     def __init__(self, known, dataroot='./data', use_gpu=True, num_workers=4, batch_size=128):
         self.num_classes = len(known)
-        # Fix 1: Ensure known is list, not dict
         if isinstance(known, dict):
             self.known = known['known']
         else:
@@ -102,30 +101,6 @@ class BloodMNIST_OSR(object):
             batch_size=batch_size, shuffle=False,
             num_workers=num_workers, pin_memory=use_gpu
         )
-
-        # Add Random300K background
-        try:
-            background_path = os.path.join(dataroot, '300K_random_images.npy')
-            background_transform = transforms.Compose([
-                transforms.RandomCrop(32, padding=4),
-                transforms.RandomHorizontalFlip(),
-                transforms.ToTensor()
-            ])
-            
-            self.background_loader = DataLoader(
-                Random300K_Images(
-                    file_path=background_path,
-                    transform=background_transform,
-                    extendable=False
-                ),
-                batch_size=batch_size,
-                shuffle=True,
-                num_workers=num_workers,
-                pin_memory=use_gpu
-            )
-        except FileNotFoundError:
-            print(f"Warning: Background dataset not found at {background_path}")
-            self.background_loader = None
 
         print(f'BloodMNIST_OSR Train samples: {len(self.train_loader.dataset)}')
         print(f'BloodMNIST_OSR Test samples (known): {len(self.test_loader.dataset)}')
@@ -222,13 +197,13 @@ class BloodMNIST_224_OSR(object):
         print(f'BloodMNIST_224_OSR Test samples (unknown): {len(self.out_loader.dataset)}')
 
 class OCTMnist_OSR(object):
-    def __init__(self, known, dataroot='./data', use_gpu=True, num_workers=4, batch_size=128):
-        self.num_classes = len(known)
+    def __init__(self, known, unknown, dataroot='./data', use_gpu=True, num_workers=4, batch_size=128):
         self.known = known
-        self.unknown = list(set(range(4)) - set(self.known))
+        self.unknown = unknown  # Add this line
+        self.num_classes = len(known)
 
-        print('Known classes:', self.known)
-        print('Unknown classes:', self.unknown)
+        print('OCTMnist_OSR Known classes:', self.known)
+        print('OCTMnist_OSR Unknown classes:', self.unknown)
 
         transform = transforms.Compose([
             transforms.Resize((32, 32)),
@@ -252,7 +227,7 @@ class OCTMnist_OSR(object):
                                download=True, root=dataroot)
 
         train_labels = train_dataset.labels.squeeze()
-        print("Training set class distribution:", np.bincount(train_labels))
+        print("OCTMnist_OSR Training set class distribution:", np.bincount(train_labels))
 
         train_mask = np.isin(train_dataset.labels.squeeze(), self.known)
         known_test_mask = np.isin(test_dataset.labels.squeeze(), self.known)
@@ -276,6 +251,6 @@ class OCTMnist_OSR(object):
             num_workers=num_workers, pin_memory=use_gpu
         )
 
-        print(f'Train samples: {len(self.train_loader.dataset)}')
-        print(f'Test samples (known): {len(self.test_loader.dataset)}')
-        print(f'Test samples (unknown): {len(self.out_loader.dataset)}')
+        print(f'OCTMnist_OSR Train samples: {len(self.train_loader.dataset)}')
+        print(f'OCTMnist_OSR Test samples (known): {len(self.test_loader.dataset)}')
+        print(f'OCTMnist_OSR Test samples (unknown): {len(self.out_loader.dataset)}')

@@ -5,6 +5,7 @@ import time
 import csv
 import pandas as pd
 import importlib
+import random
 
 import torch
 import torch.nn as nn
@@ -25,8 +26,6 @@ from split import splits_2020 as splits
 from extractor import ViTExtractor
 from features_extract import deep_features
 
-from medmnist import BloodMNIST, OCTMNIST
-
 os.environ['CUDA_DEVICE_ORDER'] = 'PCI_BUS_ID'
 os.environ['CUDA_VISIBLE_DEVICES'] = '0'
 
@@ -44,14 +43,14 @@ parser.add_argument('--max-epoch', type=int, default=100)
 # model
 parser.add_argument('--noisy-ratio', type=float, default=0.0, help="noisy ratio for ablation study")
 parser.add_argument('--margin', type=float, default=48.0, help="margin for hinge")
-parser.add_argument('--Expand', default=400, type=int, metavar='N', help='Expand factor of centers')
+parser.add_argument('--Expand', default=500, type=int, metavar='N', help='Expand factor of centers')
 parser.add_argument('--model', type=str, default='classifier32', help='resnet50, classifier32, vit, resnet18, resnet34')
 parser.add_argument('--loss', type=str, default='NirvanaOpenset')
 # misc
 parser.add_argument('--eval-freq', type=int, default=1)
 parser.add_argument('--print-freq', type=int, default=100)
 parser.add_argument('--gpu', type=str, default='1')
-parser.add_argument('--seed', type=int, default=0)
+parser.add_argument('--seed', type=int, default=42)
 parser.add_argument('--use-cpu', action='store_true')
 parser.add_argument('--save-dir', type=str, default='../log_random30k_noisy_rampfalse')
 parser.add_argument('--eval', action='store_true', help="Eval", default=False)
@@ -66,6 +65,8 @@ def main_worker(options):
     results_b9_best = dict()
     options['ramp_activate'] = False
     torch.manual_seed(options['seed'])
+    np.random.seed(options['seed'])
+    random.seed(options['seed'])
     os.environ['CUDA_VISIBLE_DEVICES'] = options['gpu']
     use_gpu = torch.cuda.is_available()
     if options['use_cpu']: use_gpu = False
@@ -102,13 +103,12 @@ def main_worker(options):
 
 
     elif options['dataset'] == 'octmnist':
-        split_dict = splits['octmnist'][i]
+        split_dict = splits[options['dataset']][options['item']]
         known = split_dict['known']
         unknown = split_dict['unknown']
-        img_size = 32
-        
         Data = OCTMnist_OSR(
             known=known,
+            unknown=unknown,
             dataroot=options['dataroot'],
             use_gpu=not options['use_cpu'],
             batch_size=options['batch_size']
