@@ -18,7 +18,7 @@ import numpy as np
 
 from modules.dchs import  NirvanaOpenset_loss
 from Networks.models import classifier32
-from Networks.resnet import resnet50, resnet18, resnet34
+from Networks.resnet import resnet50, resnet18, resnet34, resnet101, resnet152
 from datasets.osr_dataloader import Random300K_Images,BloodMNIST_OSR, OCTMnist_OSR, BloodMNIST_224_OSR
 from utils import Logger, save_networks, load_networks
 from core import test_ddfm_b9, train_Nirvana_oe
@@ -44,7 +44,7 @@ parser.add_argument('--max-epoch', type=int, default=100)
 parser.add_argument('--noisy-ratio', type=float, default=0.0, help="noisy ratio for ablation study")
 parser.add_argument('--margin', type=float, default=48.0, help="margin for hinge")
 parser.add_argument('--Expand', default=500, type=int, metavar='N', help='Expand factor of centers')
-parser.add_argument('--model', type=str, default='classifier32', help='resnet50, classifier32, vit, resnet18, resnet34')
+parser.add_argument('--model', type=str, default='classifier32', help='resnet50, classifier32, vit, resnet18, resnet34, resnet101, resnet152')
 parser.add_argument('--loss', type=str, default='NirvanaOpenset')
 # misc
 parser.add_argument('--eval-freq', type=int, default=1)
@@ -187,12 +187,17 @@ def main_worker(options):
     elif options['model'] == 'resnet34':
         net = resnet34(pretrained=True, num_classes=options['num_classes'])
         feat_dim = net.feat_dim
+    elif options['model'] == 'resnet101':
+        net = resnet101(pretrained=True,num_classes=options['num_classes'])
+        feat_dim = net.feat_dim
+    elif options['model'] == 'resnet152':
+        net = resnet152(pretrained=True,num_classes=options['num_classes'])
+        feat_dim = net.feat_dim
     elif options['model'] == 'vit':
         extractor = ViTExtractor(
         model_type='dino_vits8',  # ViT-S/8
         stride=4,
         device='cuda' if torch.cuda.is_available() else 'cpu'
-        #head='teacher'
         )
         net = extractor.model
         feat_dim = 384  # ViT-S feature dimension
@@ -228,7 +233,9 @@ def main_worker(options):
         return results
 
    
-    optimizer = torch.optim.SGD(net.parameters(), lr=options['lr'], momentum=0.9, weight_decay=1e-4)
+    #optimizer = torch.optim.SGD(net.parameters(), lr=options['lr'], momentum=0.9, weight_decay=1e-4)
+    # Replace the SGD optimizer with Adam
+    optimizer = torch.optim.Adam(net.parameters(), lr=options['lr'])
 
     scheduler = lr_scheduler.CosineAnnealingLR(optimizer,T_max=options['max_epoch']*len(trainloader))
     start_time = time.time()

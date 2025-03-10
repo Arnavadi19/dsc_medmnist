@@ -74,7 +74,6 @@ class BloodMNIST_OSR(object):
         train_dataset = BloodMNIST(split='train', transform=transform, download=True, root=dataroot)
         test_dataset = BloodMNIST(split='test', transform=test_transform, download=True, root=dataroot)
 
-        # Fix 2: Debug print class distribution
         train_labels = train_dataset.labels.squeeze()
         print("BloodMNIST_OSR Training set class distribution:", np.bincount(train_labels))
 
